@@ -154,7 +154,7 @@ def parse_json_html():
                 timeStamp = datetime.datetime.fromtimestamp(startTime).strftime('%Y-%m-%d %H:%M:%S')
                 
                 time_convert = convert_datetime_timezone(timeStamp, "Asia/Kolkata", "PST8PDT")
-                print(time_convert)
+                #print(time_convert)
                 
                 
                 con_hour, con_min, con_sec = convertMillis(dic['durationMillis'])
@@ -190,8 +190,8 @@ def parse_json_html():
                     
                 else:
                     myFile.write('<td colspan="2">' + dic['name'] + '</td>')
-                myFile.write('<td>'+ time_convert+'</td>')            
-                myFile.write('<td>'+ durTime+'</td>')     
+                myFile.write('<td>'+ time_convert + " PST" + '</td>')            
+                myFile.write('<td>'+ durTime +'</td>')     
                 
                 job_status = str(dic['status'])
     
@@ -248,8 +248,8 @@ def parse_json_html():
                 else:
                     myFile.write('<td colspan="2">' + dic['name'] + '</td>')
                 
-                myFile.write('<td>'+ time_convert+'</td>')            
-                myFile.write('<td>'+ durTime+'</td>')     
+                myFile.write('<td>'+ time_convert + " PST" + '</td>')            
+                myFile.write('<td>'+ durTime +'</td>')     
                 myFile.write('<td>'+ " " +'</td>')
                 
                 myFile.write('</tr>')

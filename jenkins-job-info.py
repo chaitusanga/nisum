@@ -11,7 +11,23 @@ import datetime
 import csv
 import urllib.request
 import urllib
+import pytz
+
 job_id = input("Enter the Job ID ")
+
+
+def convert_datetime_timezone(dt, tz1, tz2):
+    tz1 = pytz.timezone(tz1)
+    tz2 = pytz.timezone(tz2)
+
+    dt = datetime.datetime.strptime(dt,"%Y-%m-%d %H:%M:%S")
+    dt = tz1.localize(dt)
+    dt = dt.astimezone(tz2)
+    dt = dt.strftime("%Y-%m-%d %H:%M:%S")
+
+    return dt 
+
+########### End of convert_datetime_timezone() ###########
 
 
 def convertMillis(millis):
@@ -120,7 +136,8 @@ def parse_json_html():
             if flag == 0:
 
                 startTime = dic['startTimeMillis'] / 1000.0
-                timeStamp = datetime.datetime.fromtimestamp(startTime).strftime('%Y-%m-%d %H:%M:%S %Z%z')
+                timeStamp = datetime.datetime.fromtimestamp(startTime).strftime('%Y-%m-%d %H:%M:%S')
+                time_convert = convert_datetime_timezone(timeStamp, "Asia/Kolkata", "PST8PDT")
                 
                 con_hour, con_min, con_sec = convertMillis(dic['durationMillis'])
                 durTime = str(con_hour) + "Hrs " + str(con_min) + "Min " + str(con_sec) + "Sec"
@@ -143,7 +160,7 @@ def parse_json_html():
                     
                 else:
                     myFile.write('<td colspan="2">' + dic['name'] + '</td>')
-                myFile.write('<td>'+ timeStamp+'</td>')            
+                myFile.write('<td>'+ time_convert + " PST" +'</td>')            
                 myFile.write('<td>'+ durTime+'</td>')     
                 
                 job_status = str(dic['status'])
@@ -181,7 +198,7 @@ def parse_json_html():
                 else:
                     myFile.write('<td colspan="2">' + dic['name'] + '</td>')
                 
-                myFile.write('<td>'+ timeStamp+'</td>')            
+                myFile.write('<td>'+ time_convert + " PST" +'</td>')            
                 myFile.write('<td>'+ durTime+'</td>')     
                 myFile.write('<td>'+ " " +'</td>')
                 
