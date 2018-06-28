@@ -133,14 +133,17 @@ def parse_json_html():
         
         for dic in allItems:
 
-            if flag == 0:
 
-                startTime = dic['startTimeMillis'] / 1000.0
-                timeStamp = datetime.datetime.fromtimestamp(startTime).strftime('%Y-%m-%d %H:%M:%S')
-                time_convert = convert_datetime_timezone(timeStamp, "Asia/Kolkata", "PST8PDT")
-                
-                con_hour, con_min, con_sec = convertMillis(dic['durationMillis'])
-                durTime = str(con_hour) + "Hrs " + str(con_min) + "Min " + str(con_sec) + "Sec"
+
+            startTime = dic['startTimeMillis'] / 1000.0
+            timeStamp = datetime.datetime.fromtimestamp(startTime).strftime('%Y-%m-%d %H:%M:%S')
+            time_convert = convert_datetime_timezone(timeStamp, "Asia/Kolkata", "PST8PDT")
+            
+            con_hour, con_min, con_sec = convertMillis(dic['durationMillis'])
+            durTime = str(con_hour) + "Hrs " + str(con_min) + "Min " + str(con_sec) + "Sec"
+
+
+            if flag == 0:
                 
                 myFile.write('<tr>')
                 

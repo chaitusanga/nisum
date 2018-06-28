@@ -144,33 +144,33 @@ def parse_json_html():
         
         for dic in allItems:
             
-            if flag == 0:
+
                 
                 #fmt = "%Y-%m-%d %H:%M:%S %Z%z"
 
-                startTime = dic['startTimeMillis'] / 1000.0
-                #timeStamp = datetime.datetime.fromtimestamp(startTime).astimezone(timezone('US/Pacific')).strftime(fmt)
-                #timeStamp = datetime.datetime.fromtimestamp(startTime).astimezone(timezone('US/Pacific')).strftime(fmt)
-                timeStamp = datetime.datetime.fromtimestamp(startTime).strftime('%Y-%m-%d %H:%M:%S')
+            startTime = dic['startTimeMillis'] / 1000.0
+            #timeStamp = datetime.datetime.fromtimestamp(startTime).astimezone(timezone('US/Pacific')).strftime(fmt)
+            #timeStamp = datetime.datetime.fromtimestamp(startTime).astimezone(timezone('US/Pacific')).strftime(fmt)
+            timeStamp = datetime.datetime.fromtimestamp(startTime).strftime('%Y-%m-%d %H:%M:%S')
+            
+            time_convert = convert_datetime_timezone(timeStamp, "Asia/Kolkata", "PST8PDT")
+            #print(time_convert)
+            
+            
+            con_hour, con_min, con_sec = convertMillis(dic['durationMillis'])
+            durTime = str(con_hour) + "Hrs " + str(con_min) + "Min " + str(con_sec) + "Sec"
+            
+#            job_status = str(dic['status'])
+#            
+#            if job_status == "FAILED":
+#                myFile.write('<tr style="background-color:Tomato;">')
+#                myFile.write('<td>' + dic['name'] + '</td>')
+#                myFile.write('<td>'+ timeStamp+'</td>')            
+#                myFile.write('<td>'+ durTime+'</td>')            
+#                myFile.write('<td>' + dic['status'] + '</td>')
+#                myFile.write('</tr>')
                 
-                time_convert = convert_datetime_timezone(timeStamp, "Asia/Kolkata", "PST8PDT")
-                #print(time_convert)
-                
-                
-                con_hour, con_min, con_sec = convertMillis(dic['durationMillis'])
-                durTime = str(con_hour) + "Hrs " + str(con_min) + "Min " + str(con_sec) + "Sec"
-                
-    #            job_status = str(dic['status'])
-    #            
-    #            if job_status == "FAILED":
-    #                myFile.write('<tr style="background-color:Tomato;">')
-    #                myFile.write('<td>' + dic['name'] + '</td>')
-    #                myFile.write('<td>'+ timeStamp+'</td>')            
-    #                myFile.write('<td>'+ durTime+'</td>')            
-    #                myFile.write('<td>' + dic['status'] + '</td>')
-    #                myFile.write('</tr>')
-                
-                
+            if flag == 0:                
                 
                 myFile.write('<tr>')
                 
