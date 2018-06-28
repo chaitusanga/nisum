@@ -10,6 +10,8 @@ import json
 import datetime
 import urllib.request
 import urllib
+from pytz import timezone
+
 #import sys
 
 job_id = input("Enter the Job ID ")
@@ -18,6 +20,39 @@ job_id = input("Enter the Job ID ")
 
 user_id = ' '
 user_name = ' '
+
+
+import pytz
+
+def convert_datetime_timezone(dt, tz1, tz2):
+    tz1 = pytz.timezone(tz1)
+    tz2 = pytz.timezone(tz2)
+
+    dt = datetime.datetime.strptime(dt,"%Y-%m-%d %H:%M:%S")
+    dt = tz1.localize(dt)
+    dt = dt.astimezone(tz2)
+    dt = dt.strftime("%Y-%m-%d %H:%M:%S")
+
+    return dt
+
+
+
+
+def convertMillis(millis):
+    millis = int(millis)
+    seconds = (millis / 1000) % 60
+    seconds = int(seconds)
+    minutes = (millis / (1000*60) ) % 60
+    minutes = int(minutes)
+    hours = (millis / (1000*60*60)) % 24
+    hours = int(hours)
+
+    return(hours, minutes, seconds)
+
+########### End of convertMillis() ###########
+
+
+
 
 def get_url():
     
@@ -110,12 +145,20 @@ def parse_json_html():
         for dic in allItems:
             
             if flag == 0:
+                
+                #fmt = "%Y-%m-%d %H:%M:%S %Z%z"
 
                 startTime = dic['startTimeMillis'] / 1000.0
-                timeStamp = datetime.datetime.fromtimestamp(startTime).strftime('%Y-%m-%d %H:%M:%S %z')
+                #timeStamp = datetime.datetime.fromtimestamp(startTime).astimezone(timezone('US/Pacific')).strftime(fmt)
+                #timeStamp = datetime.datetime.fromtimestamp(startTime).astimezone(timezone('US/Pacific')).strftime(fmt)
+                timeStamp = datetime.datetime.fromtimestamp(startTime).strftime('%Y-%m-%d %H:%M:%S')
                 
-                duration = (dic['durationMillis'] / 1000.0)%60
-                durTime = datetime.datetime.fromtimestamp(duration).strftime('%H:%M:%S')
+                time_convert = convert_datetime_timezone(timeStamp, "Asia/Kolkata", "PST8PDT")
+                print(time_convert)
+                
+                
+                con_hour, con_min, con_sec = convertMillis(dic['durationMillis'])
+                durTime = str(con_hour) + "Hrs " + str(con_min) + "Min " + str(con_sec) + "Sec"
                 
     #            job_status = str(dic['status'])
     #            
@@ -147,7 +190,7 @@ def parse_json_html():
                     
                 else:
                     myFile.write('<td colspan="2">' + dic['name'] + '</td>')
-                myFile.write('<td>'+ timeStamp+'</td>')            
+                myFile.write('<td>'+ time_convert+'</td>')            
                 myFile.write('<td>'+ durTime+'</td>')     
                 
                 job_status = str(dic['status'])
@@ -205,7 +248,7 @@ def parse_json_html():
                 else:
                     myFile.write('<td colspan="2">' + dic['name'] + '</td>')
                 
-                myFile.write('<td>'+ timeStamp+'</td>')            
+                myFile.write('<td>'+ time_convert+'</td>')            
                 myFile.write('<td>'+ durTime+'</td>')     
                 myFile.write('<td>'+ " " +'</td>')
                 

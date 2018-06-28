@@ -7,22 +7,22 @@
                 {
                     "_class": "hudson.model.StringParameterValue",
                     "name": "ENVIRONMENT",
-                    "value": "mcre-25"
+                    "value": "bdsv-02"
                 },
                 {
                     "_class": "hudson.model.StringParameterValue",
                     "name": "BRAND",
-                    "value": "MCOM"
+                    "value": "BCOM"
                 },
                 {
                     "_class": "hudson.model.StringParameterValue",
                     "name": "UPDATE_CUSTOM_DATE",
-                    "value": "2018-07-10"
+                    "value": "NO_UPDATE"
                 },
                 {
                     "_class": "hudson.model.StringParameterValue",
                     "name": "BLUE_PRINT",
-                    "value": "mcom_site_creative"
+                    "value": "bcom_site_creative"
                 },
                 {
                     "_class": "hudson.model.BooleanParameterValue",
@@ -96,9 +96,9 @@
             "causes": [
                 {
                     "_class": "hudson.model.Cause$UserIdCause",
-                    "shortDescription": "Started by user da-MCOM-wdsdevops",
-                    "userId": "da-mcom-wdsdevops",
-                    "userName": "da-MCOM-wdsdevops"
+                    "shortDescription": "Started by user Madhu Kancharla",
+                    "userId": "bh04972",
+                    "userName": "Madhu Kancharla"
                 }
             ]
         },
@@ -112,7 +112,7 @@
             "buildsByBranchName": {
                 "refs/remotes/origin/master": {
                     "_class": "hudson.plugins.git.util.Build",
-                    "buildNumber": 6007,
+                    "buildNumber": 5995,
                     "buildResult": null,
                     "marked": {
                         "SHA1": "a8083168fbf9f16b45f25a34ad7173a4914276ac",
@@ -157,7 +157,7 @@
             "buildsByBranchName": {
                 "refs/remotes/origin/master": {
                     "_class": "hudson.plugins.git.util.Build",
-                    "buildNumber": 6007,
+                    "buildNumber": 5995,
                     "buildResult": null,
                     "marked": {
                         "SHA1": "952ead2685be6a97b333a1decab5f4ef3f6a8c99",
@@ -199,6 +199,7 @@
         {},
         {},
         {},
+        {},
         {
             "_class": "org.jenkinsci.plugins.workflow.job.views.FlowGraphAction"
         },
@@ -208,26 +209,31 @@
     "artifacts": [],
     "building": false,
     "changeSets": [],
-    "culprits": [],
-    "description": "mcre-25",
-    "displayName": "#6007",
-    "duration": 19808170,
+    "culprits": [
+        {
+            "absoluteUrl": "https://fbd-ci.devops.fds.com/user/yc05s3b",
+            "fullName": "Sumith Boddu"
+        }
+    ],
+    "description": "bdsv-02",
+    "displayName": "#5995",
+    "duration": 13194321,
     "estimatedDuration": 620990,
     "executor": null,
-    "fullDisplayName": "zeus_creative_recycles #6007",
-    "id": "6007",
+    "fullDisplayName": "zeus_creative_recycles #5995",
+    "id": "5995",
     "keepLog": false,
     "nextBuild": {
-        "number": 6008,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6008/"
+        "number": 5996,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/5996/"
     },
-    "number": 6007,
+    "number": 5995,
     "previousBuild": {
-        "number": 6006,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6006/"
+        "number": 5994,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/5994/"
     },
-    "queueId": 7037,
-    "result": "FAILURE",
-    "timestamp": 1529980227837,
-    "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6007/"
+    "queueId": 7017,
+    "result": "SUCCESS",
+    "timestamp": 1529977122124,
+    "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/5995/"
 }
