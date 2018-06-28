@@ -1,0 +1,233 @@
+{
+    "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+    "actions": [
+        {
+            "_class": "hudson.model.ParametersAction",
+            "parameters": [
+                {
+                    "_class": "hudson.model.StringParameterValue",
+                    "name": "ENVIRONMENT",
+                    "value": "bpre-02"
+                },
+                {
+                    "_class": "hudson.model.StringParameterValue",
+                    "name": "BRAND",
+                    "value": "BCOM"
+                },
+                {
+                    "_class": "hudson.model.StringParameterValue",
+                    "name": "UPDATE_CUSTOM_DATE",
+                    "value": "NO_UPDATE"
+                },
+                {
+                    "_class": "hudson.model.StringParameterValue",
+                    "name": "BLUE_PRINT",
+                    "value": "bcom_site_creative"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterValue",
+                    "name": "RUN_DATA_LOAD",
+                    "value": false
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterValue",
+                    "name": "RECYCLE_APOLLO",
+                    "value": false
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterValue",
+                    "name": "RECYCLE_FCC",
+                    "value": false
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterValue",
+                    "name": "RECYCLE_DISCOVERY",
+                    "value": false
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterValue",
+                    "name": "RUN_CATALOG_REVIEW_AND_SCP_RDPP_PUBLISH_LOAD",
+                    "value": false
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterValue",
+                    "name": "RECYCLE_CONTENT",
+                    "value": false
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterValue",
+                    "name": "RUN_APPOLO_INDEXING_AND_CONTENT_PRELOAD",
+                    "value": false
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterValue",
+                    "name": "RECYCLE_CUSTOMER",
+                    "value": true
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterValue",
+                    "name": "RECYCLE_ORDER",
+                    "value": true
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterValue",
+                    "name": "RECYCLE_PROMOTION",
+                    "value": true
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterValue",
+                    "name": "RECYCLE_WSSG",
+                    "value": true
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterValue",
+                    "name": "RECYCLE_NAVAPP",
+                    "value": true
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterValue",
+                    "name": "LOAD_AND_HOLD_PREVIEW",
+                    "value": false
+                }
+            ]
+        },
+        {
+            "_class": "hudson.model.CauseAction",
+            "causes": [
+                {
+                    "_class": "hudson.model.Cause$UserIdCause",
+                    "shortDescription": "Started by user Madhu Kancharla",
+                    "userId": "bh04972",
+                    "userName": "Madhu Kancharla"
+                }
+            ]
+        },
+        {
+            "_class": "jenkins.metrics.impl.TimeInQueueAction"
+        },
+        {},
+        {},
+        {
+            "_class": "hudson.plugins.git.util.BuildData",
+            "buildsByBranchName": {
+                "refs/remotes/origin/master": {
+                    "_class": "hudson.plugins.git.util.Build",
+                    "buildNumber": 5853,
+                    "buildResult": null,
+                    "marked": {
+                        "SHA1": "308d7a68f53fcec20907994928edc9372fbd690a",
+                        "branch": [
+                            {
+                                "SHA1": "308d7a68f53fcec20907994928edc9372fbd690a",
+                                "name": "refs/remotes/origin/master"
+                            }
+                        ]
+                    },
+                    "revision": {
+                        "SHA1": "308d7a68f53fcec20907994928edc9372fbd690a",
+                        "branch": [
+                            {
+                                "SHA1": "308d7a68f53fcec20907994928edc9372fbd690a",
+                                "name": "refs/remotes/origin/master"
+                            }
+                        ]
+                    }
+                }
+            },
+            "lastBuiltRevision": {
+                "SHA1": "308d7a68f53fcec20907994928edc9372fbd690a",
+                "branch": [
+                    {
+                        "SHA1": "308d7a68f53fcec20907994928edc9372fbd690a",
+                        "name": "refs/remotes/origin/master"
+                    }
+                ]
+            },
+            "remoteUrls": [
+                "git@code.devops.fds.com:RE/zeus-auto-deployments.git"
+            ],
+            "scmName": ""
+        },
+        {
+            "_class": "hudson.plugins.git.GitTagAction"
+        },
+        {},
+        {
+            "_class": "hudson.plugins.git.util.BuildData",
+            "buildsByBranchName": {
+                "refs/remotes/origin/master": {
+                    "_class": "hudson.plugins.git.util.Build",
+                    "buildNumber": 5853,
+                    "buildResult": null,
+                    "marked": {
+                        "SHA1": "952ead2685be6a97b333a1decab5f4ef3f6a8c99",
+                        "branch": [
+                            {
+                                "SHA1": "952ead2685be6a97b333a1decab5f4ef3f6a8c99",
+                                "name": "refs/remotes/origin/master"
+                            }
+                        ]
+                    },
+                    "revision": {
+                        "SHA1": "952ead2685be6a97b333a1decab5f4ef3f6a8c99",
+                        "branch": [
+                            {
+                                "SHA1": "952ead2685be6a97b333a1decab5f4ef3f6a8c99",
+                                "name": "refs/remotes/origin/master"
+                            }
+                        ]
+                    }
+                }
+            },
+            "lastBuiltRevision": {
+                "SHA1": "952ead2685be6a97b333a1decab5f4ef3f6a8c99",
+                "branch": [
+                    {
+                        "SHA1": "952ead2685be6a97b333a1decab5f4ef3f6a8c99",
+                        "name": "refs/remotes/origin/master"
+                    }
+                ]
+            },
+            "remoteUrls": [
+                "git@code.devops.fds.com:devops/ci-scripts.git"
+            ],
+            "scmName": ""
+        },
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {
+            "_class": "org.jenkinsci.plugins.workflow.job.views.FlowGraphAction"
+        },
+        {},
+        {}
+    ],
+    "artifacts": [],
+    "building": false,
+    "changeSets": [],
+    "culprits": [],
+    "description": "bpre-02",
+    "displayName": "#5853",
+    "duration": 493481,
+    "estimatedDuration": 2395264,
+    "executor": null,
+    "fullDisplayName": "zeus_creative_recycles #5853",
+    "id": "5853",
+    "keepLog": false,
+    "nextBuild": {
+        "number": 5854,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/5854/"
+    },
+    "number": 5853,
+    "previousBuild": {
+        "number": 5852,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/5852/"
+    },
+    "queueId": 5899,
+    "result": "FAILURE",
+    "timestamp": 1529654723810,
+    "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/5853/"
+}

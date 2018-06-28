@@ -1,0 +1,642 @@
+Started by user Lakshma Vippala
+[Pipeline] node
+Running on k8s-jenkins-agent-t7mrs in /home/jenkins/workspace/zeus_creative_recycles
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (prepare)
+[Pipeline] cleanWs
+[WS-CLEANUP] Deleting project workspace...[WS-CLEANUP] done
+[Pipeline] dir
+Running in /home/jenkins/workspace/zeus_creative_recycles/zeus_auto_deployments
+[Pipeline] {
+[Pipeline] git
+Cloning the remote Git repository
+Cloning repository git@code.devops.fds.com:RE/zeus-auto-deployments.git
+ > git init /home/jenkins/workspace/zeus_creative_recycles/zeus_auto_deployments # timeout=10
+Fetching upstream changes from git@code.devops.fds.com:RE/zeus-auto-deployments.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials private key for jenkins user
+ > git fetch --tags --progress git@code.devops.fds.com:RE/zeus-auto-deployments.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url git@code.devops.fds.com:RE/zeus-auto-deployments.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@code.devops.fds.com:RE/zeus-auto-deployments.git # timeout=10
+Fetching upstream changes from git@code.devops.fds.com:RE/zeus-auto-deployments.git
+using GIT_SSH to set credentials private key for jenkins user
+ > git fetch --tags --progress git@code.devops.fds.com:RE/zeus-auto-deployments.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 6d243b1b0cf20556c2c0ce3f7c9929a7f19f1583 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 6d243b1b0cf20556c2c0ce3f7c9929a7f19f1583
+ > git branch -a -v --no-abbrev # timeout=10
+ > git checkout -b master 6d243b1b0cf20556c2c0ce3f7c9929a7f19f1583
+Commit message: "Merge branch 'master' of code.devops.fds.com:RE/zeus-auto-deployments"
+ > git rev-list --no-walk 6d243b1b0cf20556c2c0ce3f7c9929a7f19f1583 # timeout=10
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] dir
+Running in /home/jenkins/workspace/zeus_creative_recycles/scripts
+[Pipeline] {
+[Pipeline] git
+Cloning the remote Git repository
+Cloning repository git@code.devops.fds.com:devops/ci-scripts.git
+ > git init /home/jenkins/workspace/zeus_creative_recycles/scripts # timeout=10
+Fetching upstream changes from git@code.devops.fds.com:devops/ci-scripts.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials private key for jenkins user
+ > git fetch --tags --progress git@code.devops.fds.com:devops/ci-scripts.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url git@code.devops.fds.com:devops/ci-scripts.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@code.devops.fds.com:devops/ci-scripts.git # timeout=10
+Fetching upstream changes from git@code.devops.fds.com:devops/ci-scripts.git
+using GIT_SSH to set credentials private key for jenkins user
+ > git fetch --tags --progress git@code.devops.fds.com:devops/ci-scripts.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 952ead2685be6a97b333a1decab5f4ef3f6a8c99 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 952ead2685be6a97b333a1decab5f4ef3f6a8c99
+ > git branch -a -v --no-abbrev # timeout=10
+ > git checkout -b master 952ead2685be6a97b333a1decab5f4ef3f6a8c99
+Commit message: "Merge branch 'SDDO-1604' into 'master'"
+ > git rev-list --no-walk 952ead2685be6a97b333a1decab5f4ef3f6a8c99 # timeout=10
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] sh
+[zeus_creative_recycles] Running shell script
++ virtualenv -p /bin/python3.6 ./venv
+Using base prefix '/usr'
+New python executable in /home/jenkins/workspace/zeus_creative_recycles/venv/bin/python3.6
+Also creating executable in /home/jenkins/workspace/zeus_creative_recycles/venv/bin/python
+Installing setuptools, pip, wheel...done.
+Running virtualenv with interpreter /bin/python3.6
+[Pipeline] sh
+[zeus_creative_recycles] Running shell script
++ ./venv/bin/pip install requests
+Collecting requests
+  Downloading https://files.pythonhosted.org/packages/49/df/50aa1999ab9bde74656c2919d9c0c085fd2b3775fd3eca826012bef76d8c/requests-2.18.4-py2.py3-none-any.whl (88kB)
+Collecting chardet<3.1.0,>=3.0.2 (from requests)
+  Downloading https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl (133kB)
+Collecting certifi>=2017.4.17 (from requests)
+  Downloading https://files.pythonhosted.org/packages/7c/e6/92ad559b7192d846975fc916b65f667c7b8c3a32bea7372340bfe9a15fa5/certifi-2018.4.16-py2.py3-none-any.whl (150kB)
+Collecting idna<2.7,>=2.5 (from requests)
+  Downloading https://files.pythonhosted.org/packages/27/cc/6dd9a3869f15c2edfab863b992838277279ce92663d334df9ecf5106f5c6/idna-2.6-py2.py3-none-any.whl (56kB)
+Collecting urllib3<1.23,>=1.21.1 (from requests)
+  Downloading https://files.pythonhosted.org/packages/63/cb/6965947c13a94236f6d4b8223e21beb4d576dc72e8130bd7880f600839b8/urllib3-1.22-py2.py3-none-any.whl (132kB)
+Installing collected packages: chardet, certifi, idna, urllib3, requests
+Successfully installed certifi-2018.4.16 chardet-3.0.4 idna-2.6 requests-2.18.4 urllib3-1.22
+[Pipeline] sh
+[zeus_creative_recycles] Running shell script
++ ./venv/bin/pip install paramiko
+Collecting paramiko
+  Downloading https://files.pythonhosted.org/packages/3e/db/cb7b6656e0e7387637ce850689084dc0b94b44df31cc52e5fc5c2c4fd2c1/paramiko-2.4.1-py2.py3-none-any.whl (194kB)
+Collecting pyasn1>=0.1.7 (from paramiko)
+  Downloading https://files.pythonhosted.org/packages/a0/70/2c27740f08e477499ce19eefe05dbcae6f19fdc49e9e82ce4768be0643b9/pyasn1-0.4.3-py2.py3-none-any.whl (72kB)
+Collecting cryptography>=1.5 (from paramiko)
+  Downloading https://files.pythonhosted.org/packages/fa/f4/3cde3604972dfa2b0fea85b9711948bb4fb70ab64095322aef35071bd254/cryptography-2.2.2-cp34-abi3-manylinux1_x86_64.whl (2.2MB)
+Collecting pynacl>=1.0.1 (from paramiko)
+  Downloading https://files.pythonhosted.org/packages/77/03/927e4cdbd821f929392608ddb2220a9548ce164c52047e90fadd20786fd8/PyNaCl-1.2.1-cp36-cp36m-manylinux1_x86_64.whl (692kB)
+Collecting bcrypt>=3.1.3 (from paramiko)
+  Downloading https://files.pythonhosted.org/packages/b8/09/905ec939994e2c49dcffff72f823802557f166b3815ea54c1db3671eed42/bcrypt-3.1.4-cp36-cp36m-manylinux1_x86_64.whl (54kB)
+Collecting six>=1.4.1 (from cryptography>=1.5->paramiko)
+  Downloading https://files.pythonhosted.org/packages/67/4b/141a581104b1f6397bfa78ac9d43d8ad29a7ca43ea90a2d863fe3056e86a/six-1.11.0-py2.py3-none-any.whl
+Collecting cffi>=1.7; platform_python_implementation != "PyPy" (from cryptography>=1.5->paramiko)
+  Downloading https://files.pythonhosted.org/packages/6d/c0/47db8f624f3e4e2f3f27be03a93379d1ba16a1450a7b1aacfa0366e2c0dd/cffi-1.11.5-cp36-cp36m-manylinux1_x86_64.whl (421kB)
+Requirement already satisfied: idna>=2.1 in ./venv/lib/python3.6/site-packages (from cryptography>=1.5->paramiko) (2.6)
+Collecting asn1crypto>=0.21.0 (from cryptography>=1.5->paramiko)
+  Downloading https://files.pythonhosted.org/packages/ea/cd/35485615f45f30a510576f1a56d1e0a7ad7bd8ab5ed7cdc600ef7cd06222/asn1crypto-0.24.0-py2.py3-none-any.whl (101kB)
+Collecting pycparser (from cffi>=1.7; platform_python_implementation != "PyPy"->cryptography>=1.5->paramiko)
+  Downloading https://files.pythonhosted.org/packages/8c/2d/aad7f16146f4197a11f8e91fb81df177adcc2073d36a17b1491fd09df6ed/pycparser-2.18.tar.gz (245kB)
+Building wheels for collected packages: pycparser
+  Running setup.py bdist_wheel for pycparser: started
+  Running setup.py bdist_wheel for pycparser: finished with status 'done'
+  Stored in directory: /home/jenkins/.cache/pip/wheels/c0/a1/27/5ba234bd77ea5a290cbf6d675259ec52293193467a12ef1f46
+Successfully built pycparser
+Installing collected packages: pyasn1, six, pycparser, cffi, asn1crypto, cryptography, pynacl, bcrypt, paramiko
+Successfully installed asn1crypto-0.24.0 bcrypt-3.1.4 cffi-1.11.5 cryptography-2.2.2 paramiko-2.4.1 pyasn1-0.4.3 pycparser-2.18 pynacl-1.2.1 six-1.11.0
+[Pipeline] sh
+[zeus_creative_recycles] Running shell script
++ free -h
+              total        used        free      shared  buff/cache   available
+Mem:            14G        929M         12G        1.1M        1.6G         13G
+Swap:            0B          0B          0B
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Updated Environemnt ID)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+[zeus_creative_recycles] Running shell script
++ ./venv/bin/python ./zeus_auto_deployments/env_info.py bdsv-02
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Update Custom Date)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+[zeus_creative_recycles] Running shell script
++ ./venv/bin/python ./zeus_auto_deployments/custom_date_util.py bcom_site_creative BCOM 2018-06-06 db78c117-cde1-4799-96f5-23e29e52f2c4
+2018-06-06 01:36:48,935 INFO: ZeusAction - Zeus Configure Response: {'task_id': 'fca77e57-8d47-47c4-a517-43a5f7971136', 'process_id': '09cd3610-d7a3-4e4a-87b7-63ac7538673c'}
+2018-06-06 01:36:48,996 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 09cd3610-d7a3-4e4a-87b7-63ac7538673c and status: requested
+2018-06-06 01:37:49,114 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 09cd3610-d7a3-4e4a-87b7-63ac7538673c and status: requested
+2018-06-06 01:38:49,191 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 09cd3610-d7a3-4e4a-87b7-63ac7538673c and status: requested
+2018-06-06 01:39:49,261 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 09cd3610-d7a3-4e4a-87b7-63ac7538673c and status: requested
+2018-06-06 01:40:49,382 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 09cd3610-d7a3-4e4a-87b7-63ac7538673c and status: requested
+2018-06-06 01:41:49,519 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 09cd3610-d7a3-4e4a-87b7-63ac7538673c and status: requested
+2018-06-06 01:42:49,618 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 09cd3610-d7a3-4e4a-87b7-63ac7538673c and status: requested
+2018-06-06 01:43:49,779 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 09cd3610-d7a3-4e4a-87b7-63ac7538673c and status: requested
+2018-06-06 01:44:49,858 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 09cd3610-d7a3-4e4a-87b7-63ac7538673c and status: requested
+2018-06-06 01:45:49,994 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 09cd3610-d7a3-4e4a-87b7-63ac7538673c and status: requested
+2018-06-06 01:46:50,115 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 09cd3610-d7a3-4e4a-87b7-63ac7538673c and status: requested
+2018-06-06 01:47:50,229 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 09cd3610-d7a3-4e4a-87b7-63ac7538673c and status: requested
+2018-06-06 01:48:50,357 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 09cd3610-d7a3-4e4a-87b7-63ac7538673c and status: requested
+2018-06-06 01:49:50,486 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 09cd3610-d7a3-4e4a-87b7-63ac7538673c and status: requested
+2018-06-06 01:50:50,606 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 09cd3610-d7a3-4e4a-87b7-63ac7538673c and status: requested
+2018-06-06 01:51:50,739 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 09cd3610-d7a3-4e4a-87b7-63ac7538673c and status: requested
+2018-06-06 01:52:50,815 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 09cd3610-d7a3-4e4a-87b7-63ac7538673c and status: requested
+2018-06-06 01:53:50,951 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 09cd3610-d7a3-4e4a-87b7-63ac7538673c and status: success
+{'follow_dependencies': 'true', 'parameters': {'bcom_site_creative': {'components': {'db2_postconfig': {'parameters': {'custom_date': '2018-06-06', 'update_initial_order_enable': 'true', 'brand': 'BCOM', 'load_testing_data': 'false'}}}}}}
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (SiteDB data_load)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+[zeus_creative_recycles] Running shell script
++ ./venv/bin/python ./zeus_auto_deployments/app_generic_action.py bcom_site_creative sitedb_dataloads env_recycle db78c117-cde1-4799-96f5-23e29e52f2c4
+2018-06-06 01:55:03,404 INFO: ZeusAction - Zeus Generic Action Response: {'task_id': '7eda8998-2bdf-4a03-bf92-01655aada555', 'process_id': 'c15f32d0-d452-41cc-b038-3e29ae1effd2'}
+2018-06-06 01:55:03,470 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 01:56:03,597 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 01:57:03,676 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 01:58:03,790 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 01:59:04,012 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:00:04,153 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:01:04,258 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:02:04,380 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:03:04,519 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:04:04,600 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:05:04,695 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:06:04,824 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:07:04,978 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:08:05,074 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:09:05,151 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:10:05,236 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:11:05,338 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:12:05,456 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:13:05,584 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:14:05,715 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:15:05,826 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:16:05,930 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:17:06,072 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:18:06,203 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:19:06,334 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:20:06,424 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:21:06,527 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:22:06,630 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:23:06,736 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:24:06,814 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:25:06,904 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:26:07,045 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:27:07,140 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:28:07,253 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:29:07,372 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:30:07,494 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:31:07,633 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:32:07,732 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:33:07,860 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:34:07,985 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:35:08,121 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:36:08,242 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:37:08,368 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:38:08,482 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:39:08,604 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:40:08,738 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:41:08,856 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:42:08,988 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:43:09,089 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:44:09,193 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:45:09,317 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:46:09,409 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:47:09,482 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:48:09,602 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:49:09,698 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:50:09,827 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:51:09,933 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:52:10,058 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:53:10,172 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:54:10,265 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:55:10,371 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:56:10,473 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:57:10,599 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:58:10,704 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 02:59:10,815 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 03:00:10,914 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 03:01:11,034 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 03:02:11,130 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 03:03:11,258 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 03:04:11,377 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 03:05:11,496 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 03:06:11,600 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 03:07:11,721 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: requested
+2018-06-06 03:08:11,858 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c15f32d0-d452-41cc-b038-3e29ae1effd2 and status: success
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Recycle Apollo)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+[zeus_creative_recycles] Running shell script
++ ./venv/bin/python ./zeus_auto_deployments/app_generic_action.py bcom_site_creative apollo recycle db78c117-cde1-4799-96f5-23e29e52f2c4
+2018-06-06 03:09:18,844 INFO: ZeusAction - Zeus Generic Action Response: {'task_id': '504400d4-0ed8-45a2-a0cf-e2462fa97ce5', 'process_id': 'cd1e5ac7-e7e1-48c1-87a1-6189d85b0d9e'}
+2018-06-06 03:09:18,905 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: cd1e5ac7-e7e1-48c1-87a1-6189d85b0d9e and status: requested
+2018-06-06 03:10:19,028 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: cd1e5ac7-e7e1-48c1-87a1-6189d85b0d9e and status: requested
+2018-06-06 03:11:19,165 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: cd1e5ac7-e7e1-48c1-87a1-6189d85b0d9e and status: success
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Recycle FCC)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+[zeus_creative_recycles] Running shell script
++ ./venv/bin/python ./zeus_auto_deployments/app_generic_action.py bcom_site_creative fcc recycle_and_preload db78c117-cde1-4799-96f5-23e29e52f2c4
+2018-06-06 03:12:20,606 INFO: ZeusAction - Zeus Generic Action Response: {'task_id': 'e46c9c58-83cf-4a81-9442-a10c3eb4d21b', 'process_id': 'a5011569-9c9f-4a15-96b9-0910f596c3af'}
+2018-06-06 03:12:20,669 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:13:20,801 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:14:20,926 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:15:21,056 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:16:21,177 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:17:21,289 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:18:21,399 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:19:21,528 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:20:21,641 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:21:21,749 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:22:21,846 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:23:21,962 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:24:22,084 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:25:22,205 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:26:22,319 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:27:22,452 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:28:22,577 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:29:22,728 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:30:22,830 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:31:22,901 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:32:23,017 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:33:23,144 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:34:23,208 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:35:23,292 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:36:23,475 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:37:23,591 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:38:23,718 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:39:23,838 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:40:23,969 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:41:24,100 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:42:24,189 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:43:24,322 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:44:24,431 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:45:24,549 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:46:24,670 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:47:24,798 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:48:24,934 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:49:25,066 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:50:25,200 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:51:25,309 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:52:25,407 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:53:25,512 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:54:25,628 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: requested
+2018-06-06 03:55:25,730 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: a5011569-9c9f-4a15-96b9-0910f596c3af and status: success
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Recycle Discovery)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+[zeus_creative_recycles] Running shell script
++ ./venv/bin/python ./zeus_auto_deployments/app_generic_action.py bcom_site_creative discovery recycle db78c117-cde1-4799-96f5-23e29e52f2c4
+2018-06-06 03:56:30,915 INFO: ZeusAction - Zeus Generic Action Response: {'task_id': '007bc3c6-e394-4e6c-becb-a61b8054b049', 'process_id': 'ebdfa91e-7241-4397-9770-3724879c3c59'}
+2018-06-06 03:56:30,988 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: ebdfa91e-7241-4397-9770-3724879c3c59 and status: requested
+2018-06-06 03:57:31,124 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: ebdfa91e-7241-4397-9770-3724879c3c59 and status: requested
+2018-06-06 03:58:31,210 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: ebdfa91e-7241-4397-9770-3724879c3c59 and status: requested
+2018-06-06 03:59:31,341 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: ebdfa91e-7241-4397-9770-3724879c3c59 and status: requested
+2018-06-06 04:00:31,467 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: ebdfa91e-7241-4397-9770-3724879c3c59 and status: requested
+2018-06-06 04:01:31,602 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: ebdfa91e-7241-4397-9770-3724879c3c59 and status: requested
+2018-06-06 04:02:31,730 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: ebdfa91e-7241-4397-9770-3724879c3c59 and status: requested
+2018-06-06 04:03:31,829 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: ebdfa91e-7241-4397-9770-3724879c3c59 and status: requested
+2018-06-06 04:04:31,929 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: ebdfa91e-7241-4397-9770-3724879c3c59 and status: success
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (SCP and RDPP artifact check  and download)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] parallel
+[Pipeline] [scp] { (Branch: scp)
+[Pipeline] [rdpp] { (Branch: rdpp)
+[Pipeline] [scp] script
+[Pipeline] [scp] {
+[Pipeline] [rdpp] script
+[Pipeline] [rdpp] {
+[Pipeline] [scp] sh
+[scp] [zeus_creative_recycles] Running shell script
+[Pipeline] [rdpp] sh
+[scp] + ./venv/bin/python ./zeus_auto_deployments/artifact_helper.py FCC-ETL-DATA-PREVIEW-BCOM-SCP /www/etl/scp False db78c117-cde1-4799-96f5-23e29e52f2c4
+[scp] 2018-06-06 04:05:32,690 INFO: ArtifactHelper - Today's Date: 2018-06-06
+[scp] 2018-06-06 04:05:32,690 INFO: ArtifactHelper - Today's Date format: 20180606
+[scp] 2018-06-06 04:05:32,690 INFO: ArtifactHelper - Waiting for today's artifact for FCC-ETL-DATA-PREVIEW-BCOM-SCP
+[rdpp] [zeus_creative_recycles] Running shell script
+[rdpp] + ./venv/bin/python ./zeus_auto_deployments/artifact_helper.py FCC-ETL-DATA-PROD-BCOM-RDPP /www/etl/rdpp True db78c117-cde1-4799-96f5-23e29e52f2c4
+[rdpp] 2018-06-06 04:05:32,712 INFO: ArtifactHelper - Today's Date: 2018-06-06
+[rdpp] 2018-06-06 04:05:32,712 INFO: ArtifactHelper - Today's Date format: 20180606
+[rdpp] 2018-06-06 04:05:33,026 INFO: ArtifactHelper - Found today's artifact for FCC-ETL-DATA-PROD-BCOM-RDPP version 20180605-234500 URL:http://ci-artifacts.devops.fds.com/artifactory/fcc-etl-data-prod/BCOM/rdpp/20180605-234500.tar.gz
+[rdpp] 2018-06-06 04:05:33,027 INFO: ArtifactHelper - Waiting for 10 mins to copy the artifact to make sure Artifact completely available in Artifactory....
+[scp] 2018-06-06 04:06:33,012 INFO: ArtifactHelper - Found today's artifact for FCC-ETL-DATA-PREVIEW-BCOM-SCP version 20180606-012345 URL:http://ci-artifacts.devops.fds.com/artifactory/fcc-etl-data-prod/BCOM/preview/20180606-012345.tar.gz
+[scp] 2018-06-06 04:06:33,012 INFO: ArtifactHelper - Waiting for 10 mins to copy the artifact to make sure Artifact completely available in Artifactory....
+[rdpp] 2018-06-06 04:15:33,647 INFO: SSHUtil.SSH - Creating ssh connection to '<ssh:cloudop@172.21.11.104>'.
+[rdpp] 2018-06-06 04:15:33,647 INFO: SSHUtil.SSH - Using public key authentication.
+[rdpp] 2018-06-06 04:15:33,685 INFO: paramiko.transport - Connected (version 2.0, client OpenSSH_5.3)
+[rdpp] 2018-06-06 04:15:33,998 INFO: paramiko.transport - Authentication (publickey) successful!
+[rdpp] 2018-06-06 04:15:33,999 INFO: SSHUtil.SSH - SSH connection to <ssh:cloudop@172.21.11.104> successfully created
+[Pipeline] [rdpp] }
+[Pipeline] [rdpp] // script
+[Pipeline] [rdpp] }
+[scp] 2018-06-06 04:16:33,230 INFO: SSHUtil.SSH - Creating ssh connection to '<ssh:cloudop@172.21.11.104>'.
+[scp] 2018-06-06 04:16:33,231 INFO: SSHUtil.SSH - Using public key authentication.
+[scp] 2018-06-06 04:16:33,249 INFO: paramiko.transport - Connected (version 2.0, client OpenSSH_5.3)
+[scp] 2018-06-06 04:16:33,513 INFO: paramiko.transport - Authentication (publickey) successful!
+[scp] 2018-06-06 04:16:33,514 INFO: SSHUtil.SSH - SSH connection to <ssh:cloudop@172.21.11.104> successfully created
+[Pipeline] [scp] }
+[Pipeline] [scp] // script
+[Pipeline] [scp] }
+[Pipeline] // parallel
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run SCP and RDPP and Catalog Review load)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+[zeus_creative_recycles] Running shell script
++ ./venv/bin/python ./zeus_auto_deployments/app_generic_action.py bcom_site_creative fcc run_etl_load db78c117-cde1-4799-96f5-23e29e52f2c4
+2018-06-06 04:18:25,363 INFO: ZeusAction - Zeus Generic Action Response: {'task_id': '89bb2e5e-3486-400f-9e60-a6d5b9db9d56', 'process_id': '71235701-7fdc-43d0-8cb2-6c637ec1e6b4'}
+2018-06-06 04:18:25,417 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 71235701-7fdc-43d0-8cb2-6c637ec1e6b4 and status: requested
+2018-06-06 04:19:25,547 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 71235701-7fdc-43d0-8cb2-6c637ec1e6b4 and status: requested
+2018-06-06 04:20:25,656 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 71235701-7fdc-43d0-8cb2-6c637ec1e6b4 and status: requested
+2018-06-06 04:21:25,740 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 71235701-7fdc-43d0-8cb2-6c637ec1e6b4 and status: requested
+2018-06-06 04:22:25,856 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 71235701-7fdc-43d0-8cb2-6c637ec1e6b4 and status: requested
+2018-06-06 04:23:25,977 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 71235701-7fdc-43d0-8cb2-6c637ec1e6b4 and status: requested
+2018-06-06 04:24:26,101 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 71235701-7fdc-43d0-8cb2-6c637ec1e6b4 and status: requested
+2018-06-06 04:25:26,214 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 71235701-7fdc-43d0-8cb2-6c637ec1e6b4 and status: requested
+2018-06-06 04:26:26,313 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 71235701-7fdc-43d0-8cb2-6c637ec1e6b4 and status: requested
+2018-06-06 04:27:26,430 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 71235701-7fdc-43d0-8cb2-6c637ec1e6b4 and status: requested
+2018-06-06 04:28:26,542 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 71235701-7fdc-43d0-8cb2-6c637ec1e6b4 and status: requested
+2018-06-06 04:29:26,707 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 71235701-7fdc-43d0-8cb2-6c637ec1e6b4 and status: requested
+2018-06-06 04:30:26,811 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 71235701-7fdc-43d0-8cb2-6c637ec1e6b4 and status: requested
+2018-06-06 04:31:26,931 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 71235701-7fdc-43d0-8cb2-6c637ec1e6b4 and status: requested
+2018-06-06 04:32:27,079 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 71235701-7fdc-43d0-8cb2-6c637ec1e6b4 and status: requested
+2018-06-06 04:33:27,197 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 71235701-7fdc-43d0-8cb2-6c637ec1e6b4 and status: success
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Recycle Content)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+[zeus_creative_recycles] Running shell script
++ ./venv/bin/python ./zeus_auto_deployments/app_generic_action.py bcom_site_creative content recycle db78c117-cde1-4799-96f5-23e29e52f2c4
+2018-06-06 04:34:36,382 INFO: ZeusAction - Zeus Generic Action Response: {'task_id': 'ac6b2202-1e42-4552-84e2-1951b355f0d4', 'process_id': 'c8858bcb-430e-4517-a933-23bf16db7169'}
+2018-06-06 04:34:36,444 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c8858bcb-430e-4517-a933-23bf16db7169 and status: requested
+2018-06-06 04:35:36,578 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c8858bcb-430e-4517-a933-23bf16db7169 and status: requested
+2018-06-06 04:36:36,657 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c8858bcb-430e-4517-a933-23bf16db7169 and status: requested
+2018-06-06 04:37:36,801 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: c8858bcb-430e-4517-a933-23bf16db7169 and status: success
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run Apollo Indexing, Content preload and SCP Exchange rate)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+[zeus_creative_recycles] Running shell script
++ ./venv/bin/python ./zeus_auto_deployments/app_generic_action.py bcom_site_creative discovery indexing_content_load_and_exchange_load db78c117-cde1-4799-96f5-23e29e52f2c4
+2018-06-06 04:38:45,918 INFO: ZeusAction - Zeus Generic Action Response: {'task_id': 'd7e47bb7-1d1a-45c8-a517-369d0e7bc3ad', 'process_id': '2c3f496d-8d80-4a09-85c3-3dc7789dec27'}
+2018-06-06 04:38:45,996 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:39:46,121 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:40:46,242 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:41:46,360 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:42:46,468 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:43:46,665 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:44:46,768 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:45:46,900 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:46:46,962 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:47:47,103 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:48:47,284 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:49:47,397 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:50:47,525 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:51:47,616 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:52:47,738 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:53:47,843 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:54:48,005 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:55:48,146 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:56:48,299 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:57:48,450 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:58:48,580 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 04:59:48,710 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:00:48,819 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:01:48,942 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:02:49,013 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:03:49,099 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:04:49,205 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:05:49,326 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:06:49,455 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:07:49,584 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:08:49,751 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:09:49,870 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:10:50,005 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:11:50,105 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:12:50,186 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:13:50,315 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:14:50,447 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:15:50,574 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:16:50,693 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:17:50,806 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:18:51,001 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:19:51,125 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:20:51,243 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:21:51,360 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:22:51,439 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: requested
+2018-06-06 05:23:51,547 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2c3f496d-8d80-4a09-85c3-3dc7789dec27 and status: success
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Recycle WSSG)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+[zeus_creative_recycles] Running shell script
++ ./venv/bin/python ./zeus_auto_deployments/app_generic_action.py bcom_site_creative wssg recycle db78c117-cde1-4799-96f5-23e29e52f2c4
+2018-06-06 05:25:00,378 INFO: ZeusAction - Zeus Generic Action Response: {'task_id': '60c9ba7a-d09d-4d65-a43a-0be91cf018ae', 'process_id': '2e028656-0e9b-472d-a421-3c5f6301c01e'}
+2018-06-06 05:25:00,443 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2e028656-0e9b-472d-a421-3c5f6301c01e and status: requested
+2018-06-06 05:26:00,568 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2e028656-0e9b-472d-a421-3c5f6301c01e and status: requested
+2018-06-06 05:27:00,692 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2e028656-0e9b-472d-a421-3c5f6301c01e and status: requested
+2018-06-06 05:28:00,812 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2e028656-0e9b-472d-a421-3c5f6301c01e and status: requested
+2018-06-06 05:29:00,958 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2e028656-0e9b-472d-a421-3c5f6301c01e and status: requested
+2018-06-06 05:30:01,074 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2e028656-0e9b-472d-a421-3c5f6301c01e and status: requested
+2018-06-06 05:31:01,205 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2e028656-0e9b-472d-a421-3c5f6301c01e and status: requested
+2018-06-06 05:32:01,325 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 2e028656-0e9b-472d-a421-3c5f6301c01e and status: success
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Recycle NavApp)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+[zeus_creative_recycles] Running shell script
++ ./venv/bin/python ./zeus_auto_deployments/app_generic_action.py bcom_site_creative navapp recycle db78c117-cde1-4799-96f5-23e29e52f2c4
+2018-06-06 05:33:06,561 INFO: ZeusAction - Zeus Generic Action Response: {'task_id': 'e18d97d2-a40f-491b-9250-c53c2352a2d7', 'process_id': '4d04f6b0-39b0-4e65-b70a-8bf3ea265aef'}
+2018-06-06 05:33:06,630 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 4d04f6b0-39b0-4e65-b70a-8bf3ea265aef and status: requested
+2018-06-06 05:34:06,717 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 4d04f6b0-39b0-4e65-b70a-8bf3ea265aef and status: requested
+2018-06-06 05:35:06,825 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 4d04f6b0-39b0-4e65-b70a-8bf3ea265aef and status: requested
+2018-06-06 05:36:06,927 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 4d04f6b0-39b0-4e65-b70a-8bf3ea265aef and status: requested
+2018-06-06 05:37:07,034 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 4d04f6b0-39b0-4e65-b70a-8bf3ea265aef and status: requested
+2018-06-06 05:38:07,144 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 4d04f6b0-39b0-4e65-b70a-8bf3ea265aef and status: requested
+2018-06-06 05:39:07,280 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 4d04f6b0-39b0-4e65-b70a-8bf3ea265aef and status: success
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Recycle Customer)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+[zeus_creative_recycles] Running shell script
++ ./venv/bin/python ./zeus_auto_deployments/app_generic_action.py bcom_site_creative customer recycle db78c117-cde1-4799-96f5-23e29e52f2c4
+2018-06-06 05:40:16,700 INFO: ZeusAction - Zeus Generic Action Response: {'task_id': 'b92fa2fe-b5c2-4b10-8795-410ea596d09a', 'process_id': '4f358c37-62dc-4c81-a502-9045dfda7585'}
+2018-06-06 05:40:16,762 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 4f358c37-62dc-4c81-a502-9045dfda7585 and status: requested
+2018-06-06 05:41:16,842 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 4f358c37-62dc-4c81-a502-9045dfda7585 and status: requested
+2018-06-06 05:42:16,979 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 4f358c37-62dc-4c81-a502-9045dfda7585 and status: requested
+2018-06-06 05:43:17,098 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 4f358c37-62dc-4c81-a502-9045dfda7585 and status: success
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Recycle Order)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+[zeus_creative_recycles] Running shell script
++ ./venv/bin/python ./zeus_auto_deployments/app_generic_action.py bcom_site_creative order recycle db78c117-cde1-4799-96f5-23e29e52f2c4
+2018-06-06 05:44:26,113 INFO: ZeusAction - Zeus Generic Action Response: {'task_id': '5a49e22b-d417-4fac-a61a-330cdab05972', 'process_id': '15d56b33-0739-44ee-870a-19350eefa759'}
+2018-06-06 05:44:26,170 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 15d56b33-0739-44ee-870a-19350eefa759 and status: requested
+2018-06-06 05:45:26,249 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 15d56b33-0739-44ee-870a-19350eefa759 and status: requested
+2018-06-06 05:46:26,382 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 15d56b33-0739-44ee-870a-19350eefa759 and status: requested
+2018-06-06 05:47:26,499 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 15d56b33-0739-44ee-870a-19350eefa759 and status: requested
+2018-06-06 05:48:26,615 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 15d56b33-0739-44ee-870a-19350eefa759 and status: success
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Recycle Promotion)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+[zeus_creative_recycles] Running shell script
++ ./venv/bin/python ./zeus_auto_deployments/app_generic_action.py bcom_site_creative promotion recycle db78c117-cde1-4799-96f5-23e29e52f2c4
+2018-06-06 05:49:31,769 INFO: ZeusAction - Zeus Generic Action Response: {'task_id': '7ad09259-9058-4c1c-868b-4b1ac6d3b9c0', 'process_id': '7da92fec-39db-4e19-bc4f-5c0cafb87e1a'}
+2018-06-06 05:49:31,834 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 7da92fec-39db-4e19-bc4f-5c0cafb87e1a and status: requested
+2018-06-06 05:50:31,966 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 7da92fec-39db-4e19-bc4f-5c0cafb87e1a and status: requested
+2018-06-06 05:51:32,095 INFO: ZeusAction - Zeus EnvID: db78c117-cde1-4799-96f5-23e29e52f2c4 and EnvName: db78c117-cde1-4799-96f5-23e29e52f2c4 and ProcessID: 7da92fec-39db-4e19-bc4f-5c0cafb87e1a and status: success
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] emailext
+Sending email to: nikhil.kumar@macys.com narasimha.samineni@macys.com sumit.boddu@macys.com
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
