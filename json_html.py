@@ -33,7 +33,7 @@ def convert_datetime_timezone(dt, tz1, tz2):
     dt = dt.astimezone(tz2)
     dt = dt.strftime("%Y-%m-%d %H:%M:%S")
 
-    return dt
+    return dt 
 
 
 
