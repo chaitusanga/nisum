@@ -7,7 +7,7 @@
                 {
                     "_class": "hudson.model.StringParameterValue",
                     "name": "ENVIRONMENT",
-                    "value": "mcre-28"
+                    "value": "mcre-22"
                 },
                 {
                     "_class": "hudson.model.StringParameterValue",
@@ -17,7 +17,7 @@
                 {
                     "_class": "hudson.model.StringParameterValue",
                     "name": "UPDATE_CUSTOM_DATE",
-                    "value": "NO_UPDATE"
+                    "value": "2018-07-04"
                 },
                 {
                     "_class": "hudson.model.StringParameterValue",
@@ -27,7 +27,7 @@
                 {
                     "_class": "hudson.model.BooleanParameterValue",
                     "name": "RUN_DATA_LOAD",
-                    "value": false
+                    "value": true
                 },
                 {
                     "_class": "hudson.model.BooleanParameterValue",
@@ -96,13 +96,12 @@
             "causes": [
                 {
                     "_class": "hudson.model.Cause$UserIdCause",
-                    "shortDescription": "Started by user Shabnam Bhanu",
-                    "userId": "bh04962",
-                    "userName": "Shabnam Bhanu"
+                    "shortDescription": "Started by user da-MCOM-wdsdevops",
+                    "userId": "da-mcom-wdsdevops",
+                    "userName": "da-MCOM-wdsdevops"
                 }
             ]
         },
-        {},
         {
             "_class": "jenkins.metrics.impl.TimeInQueueAction"
         },
@@ -113,7 +112,7 @@
             "buildsByBranchName": {
                 "refs/remotes/origin/master": {
                     "_class": "hudson.plugins.git.util.Build",
-                    "buildNumber": 6220,
+                    "buildNumber": 6122,
                     "buildResult": null,
                     "marked": {
                         "SHA1": "f3dbf2a8f9d2f76c0a4109c77e4064c19ee3996f",
@@ -158,7 +157,7 @@
             "buildsByBranchName": {
                 "refs/remotes/origin/master": {
                     "_class": "hudson.plugins.git.util.Build",
-                    "buildNumber": 6220,
+                    "buildNumber": 6122,
                     "buildResult": null,
                     "marked": {
                         "SHA1": "952ead2685be6a97b333a1decab5f4ef3f6a8c99",
@@ -194,6 +193,9 @@
             ],
             "scmName": ""
         },
+        {
+            "_class": "jenkins.model.InterruptedBuildAction"
+        },
         {},
         {},
         {},
@@ -207,27 +209,28 @@
         {}
     ],
     "artifacts": [],
-    "building": true,
+    "building": false,
     "changeSets": [],
     "culprits": [],
-    "description": "mcre-28",
-    "displayName": "#6220",
-    "duration": 0,
+    "description": "mcre-22",
+    "displayName": "#6122",
+    "duration": 4803461,
     "estimatedDuration": 3616186,
-    "executor": {
-        "_class": "hudson.model.OneOffExecutor"
-    },
-    "fullDisplayName": "zeus_creative_recycles #6220",
-    "id": "6220",
+    "executor": null,
+    "fullDisplayName": "zeus_creative_recycles #6122",
+    "id": "6122",
     "keepLog": false,
-    "nextBuild": null,
-    "number": 6220,
-    "previousBuild": {
-        "number": 6219,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6219/"
+    "nextBuild": {
+        "number": 6123,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6123/"
     },
-    "queueId": 8761,
-    "result": null,
-    "timestamp": 1530252169305,
-    "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6220/"
+    "number": 6122,
+    "previousBuild": {
+        "number": 6121,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6121/"
+    },
+    "queueId": 7950,
+    "result": "ABORTED",
+    "timestamp": 1530152132331,
+    "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6122/"
 }

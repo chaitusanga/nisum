@@ -132,8 +132,9 @@ def parse_json_html():
     
         myFile.write('<tr>')
         myFile.write('<th colspan="2">Task</th>')
-        myFile.write('<th>StartTime</th>')            
+        myFile.write('<th>Start Time</th>')            
         myFile.write('<th>Duration</th>')
+        myFile.write('<th>End Time</th>')
         myFile.write('<th>Status</th>')
         myFile.write('</tr>')
         
@@ -142,11 +143,16 @@ def parse_json_html():
 
 
             startTime = dic['startTimeMillis'] / 1000.0
-            timeStamp = datetime.datetime.fromtimestamp(startTime).strftime('%Y-%m-%d %H:%M:%S')
-            time_convert = convert_datetime_timezone(timeStamp, "Asia/Kolkata", "PST8PDT")
+            start_timeStamp = datetime.datetime.fromtimestamp(startTime).strftime('%Y-%m-%d %H:%M:%S')
+            start_time_convert = convert_datetime_timezone(start_timeStamp, "Asia/Kolkata", "PST8PDT")
             
             con_hour, con_min, con_sec = convertMillis(dic['durationMillis'])
             durTime = str(con_hour) + "Hrs " + str(con_min) + "Min " + str(con_sec) + "Sec"
+
+
+            endTime = (dic['startTimeMillis'] + dic['durationMillis']) / 1000.0            
+            end_timeStamp = datetime.datetime.fromtimestamp(endTime).strftime('%Y-%m-%d %H:%M:%S')            
+            end_time_convert = convert_datetime_timezone(end_timeStamp, "Asia/Kolkata", "PST8PDT")
 
 
             if flag == 0:
@@ -169,8 +175,9 @@ def parse_json_html():
                     
                 else:
                     myFile.write('<td colspan="2">' + dic['name'] + '</td>')
-                myFile.write('<td>'+ time_convert + " PST" +'</td>')            
+                myFile.write('<td>'+ start_time_convert + " PST" +'</td>')            
                 myFile.write('<td>'+ durTime+'</td>')     
+                myFile.write('<td>'+ end_time_convert + " PST" +'</td>') 
                 
                 job_status = str(dic['status'])
     
@@ -207,8 +214,9 @@ def parse_json_html():
                 else:
                     myFile.write('<td colspan="2">' + dic['name'] + '</td>')
                 
-                myFile.write('<td>'+ time_convert + " PST" +'</td>')            
-                myFile.write('<td>'+ durTime+'</td>')     
+                myFile.write('<td>'+ start_time_convert + " PST" +'</td>')            
+                myFile.write('<td>'+ durTime+'</td>')   
+                myFile.write('<td>'+ end_time_convert + " PST" +'</td>') 
                 myFile.write('<td>'+ " " +'</td>')
                 
                 myFile.write('</tr>')
@@ -254,5 +262,5 @@ def parse_json():
 
 
 get_url()
-parse_json()
+#parse_json()
 parse_json_html()
