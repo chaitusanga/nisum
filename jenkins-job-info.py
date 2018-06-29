@@ -12,6 +12,7 @@ import csv
 import urllib.request
 import urllib
 import pytz
+import re
 
 job_id = input("Enter the Job ID ")
 
@@ -52,6 +53,8 @@ def get_url():
     
     job_url = URL + job_id + wfapi_query_string
     
+    build_url = URL + job_id
+    
     ####Getting wfapi data####
     
     with urllib.request.urlopen(job_url) as url:
@@ -76,13 +79,13 @@ def get_url():
         for line in info:
             fields = line.strip().split(':')
             if "description" in line:
-                desc = fields[1]
+                desc = re.sub('[^A-Za-z0-9-]+', '', fields[1])
             if "userId" in line:
-                user_id = fields[1]
+                user_id = re.sub('[^A-Za-z0-9-]+', '', fields[1])
             if "userName" in line:
-                user_name = fields[1]
+                user_name = re.sub('[^A-Za-z0-9 ]+', '', fields[1])
             
-    return (desc, user_id, user_name)
+    return (build_url, desc, user_id, user_name)
     
     
 
@@ -93,7 +96,9 @@ def parse_json_html():
     
     flag = 0
     
-    desc, user_id, user_name = get_url()
+    build_url, desc, user_id, user_name = get_url()
+    
+    build_url_html = '<a href="' + build_url + '">' + build_url + '</a>'
     
     with open('jenkins-log.json', 'r') as f:
         obj = f.read()
@@ -116,6 +121,7 @@ def parse_json_html():
         
         myFile.write('<h2> Jenkins Job Information </h2>')
         myFile.write('<p> <b> Environment: </b>' + desc + '</p>')
+        myFile.write('<p> <b> Build URL: </b>' + build_url_html + '</p>')
         myFile.write('<p> <b> Build No.: </b>' + job_id + '</p>')
         myFile.write('<p> <b> UserId: </b>' + user_id + '</p>')
         myFile.write('<p> <b> User Name: </b>' + user_name + '</p>')
