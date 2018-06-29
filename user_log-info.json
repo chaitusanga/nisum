@@ -7,7 +7,7 @@
                 {
                     "_class": "hudson.model.StringParameterValue",
                     "name": "ENVIRONMENT",
-                    "value": "mpre-05"
+                    "value": "mcre-25"
                 },
                 {
                     "_class": "hudson.model.StringParameterValue",
@@ -17,7 +17,7 @@
                 {
                     "_class": "hudson.model.StringParameterValue",
                     "name": "UPDATE_CUSTOM_DATE",
-                    "value": "NO_UPDATE"
+                    "value": "2018-07-10"
                 },
                 {
                     "_class": "hudson.model.StringParameterValue",
@@ -27,32 +27,32 @@
                 {
                     "_class": "hudson.model.BooleanParameterValue",
                     "name": "RUN_DATA_LOAD",
-                    "value": false
+                    "value": true
                 },
                 {
                     "_class": "hudson.model.BooleanParameterValue",
                     "name": "RECYCLE_APOLLO",
-                    "value": false
+                    "value": true
                 },
                 {
                     "_class": "hudson.model.BooleanParameterValue",
                     "name": "RECYCLE_FCC",
-                    "value": false
+                    "value": true
                 },
                 {
                     "_class": "hudson.model.BooleanParameterValue",
                     "name": "RECYCLE_DISCOVERY",
-                    "value": false
+                    "value": true
                 },
                 {
                     "_class": "hudson.model.BooleanParameterValue",
                     "name": "RUN_CATALOG_REVIEW_AND_SCP_RDPP_PUBLISH_LOAD",
-                    "value": false
+                    "value": true
                 },
                 {
                     "_class": "hudson.model.BooleanParameterValue",
                     "name": "RECYCLE_CONTENT",
-                    "value": false
+                    "value": true
                 },
                 {
                     "_class": "hudson.model.BooleanParameterValue",
@@ -96,9 +96,9 @@
             "causes": [
                 {
                     "_class": "hudson.model.Cause$UserIdCause",
-                    "shortDescription": "Started by user Madhu Kancharla",
-                    "userId": "bh04972",
-                    "userName": "Madhu Kancharla"
+                    "shortDescription": "Started by user da-MCOM-wdsdevops",
+                    "userId": "da-mcom-wdsdevops",
+                    "userName": "da-MCOM-wdsdevops"
                 }
             ]
         },
@@ -112,22 +112,22 @@
             "buildsByBranchName": {
                 "refs/remotes/origin/master": {
                     "_class": "hudson.plugins.git.util.Build",
-                    "buildNumber": 6170,
+                    "buildNumber": 6007,
                     "buildResult": null,
                     "marked": {
-                        "SHA1": "f3dbf2a8f9d2f76c0a4109c77e4064c19ee3996f",
+                        "SHA1": "a8083168fbf9f16b45f25a34ad7173a4914276ac",
                         "branch": [
                             {
-                                "SHA1": "f3dbf2a8f9d2f76c0a4109c77e4064c19ee3996f",
+                                "SHA1": "a8083168fbf9f16b45f25a34ad7173a4914276ac",
                                 "name": "refs/remotes/origin/master"
                             }
                         ]
                     },
                     "revision": {
-                        "SHA1": "f3dbf2a8f9d2f76c0a4109c77e4064c19ee3996f",
+                        "SHA1": "a8083168fbf9f16b45f25a34ad7173a4914276ac",
                         "branch": [
                             {
-                                "SHA1": "f3dbf2a8f9d2f76c0a4109c77e4064c19ee3996f",
+                                "SHA1": "a8083168fbf9f16b45f25a34ad7173a4914276ac",
                                 "name": "refs/remotes/origin/master"
                             }
                         ]
@@ -135,10 +135,10 @@
                 }
             },
             "lastBuiltRevision": {
-                "SHA1": "f3dbf2a8f9d2f76c0a4109c77e4064c19ee3996f",
+                "SHA1": "a8083168fbf9f16b45f25a34ad7173a4914276ac",
                 "branch": [
                     {
-                        "SHA1": "f3dbf2a8f9d2f76c0a4109c77e4064c19ee3996f",
+                        "SHA1": "a8083168fbf9f16b45f25a34ad7173a4914276ac",
                         "name": "refs/remotes/origin/master"
                     }
                 ]
@@ -157,7 +157,7 @@
             "buildsByBranchName": {
                 "refs/remotes/origin/master": {
                     "_class": "hudson.plugins.git.util.Build",
-                    "buildNumber": 6170,
+                    "buildNumber": 6007,
                     "buildResult": null,
                     "marked": {
                         "SHA1": "952ead2685be6a97b333a1decab5f4ef3f6a8c99",
@@ -206,27 +206,28 @@
         {}
     ],
     "artifacts": [],
-    "building": true,
+    "building": false,
     "changeSets": [],
     "culprits": [],
-    "description": "mpre-05",
-    "displayName": "#6170",
-    "duration": 0,
-    "estimatedDuration": 620990,
-    "executor": {
-        "_class": "hudson.model.OneOffExecutor"
-    },
-    "fullDisplayName": "zeus_creative_recycles #6170",
-    "id": "6170",
+    "description": "mcre-25",
+    "displayName": "#6007",
+    "duration": 19808170,
+    "estimatedDuration": 7072894,
+    "executor": null,
+    "fullDisplayName": "zeus_creative_recycles #6007",
+    "id": "6007",
     "keepLog": false,
-    "nextBuild": null,
-    "number": 6170,
-    "previousBuild": {
-        "number": 6169,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6169/"
+    "nextBuild": {
+        "number": 6008,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6008/"
     },
-    "queueId": 8168,
-    "result": null,
-    "timestamp": 1530172873734,
-    "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6170/"
+    "number": 6007,
+    "previousBuild": {
+        "number": 6006,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6006/"
+    },
+    "queueId": 7037,
+    "result": "FAILURE",
+    "timestamp": 1529980227837,
+    "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6007/"
 }

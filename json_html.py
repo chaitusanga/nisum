@@ -199,7 +199,7 @@ def parse_json_html():
                     myFile.write('<td style="background-color:Cyan;">' + dic['status'] + '</td>')
                     myFile.write('</tr>')
                     flag = 0
-                elif job_status == "FAILED":
+                elif job_status == "FAILED" and dic['name'] == "Recycle Order":
                     myFile.write('<td style="background-color:Red;">' + dic['status'] + '</td>')
                     myFile.write('</tr>')
                     flag = 1
