@@ -7,9 +7,10 @@ Created on Fri Jun 29 11:30:43 2018
 """
 
 import json
-import datetime
+#import datetime
 import urllib.request
 import urllib
+import re
 
 
 
@@ -30,29 +31,21 @@ def get_url():
         json.dump(data, f, indent=4, separators=(',', ': '), sort_keys=True)
         f.write('\n')
     
-    #user_info_url = URL + job_id + json_api_string
-    
-    ####Getting json api data####
-    
-#    with urllib.request.urlopen(user_info_url) as user_url:
-#        user_data = json.loads(user_url.read().decode('utf-8'))
-#    
-#    with open('user_log-info.json', 'w') as f:
-#        json.dump(user_data, f, indent=4, separators=(',', ': '), sort_keys=True)
-#        f.write('\n')
+
     
     with open('latest-job-log.json', 'r') as info:
         for line in info:
             fields = line.strip().split(':')
             if "description" in line:
-                desc = fields[1]
+                desc = re.sub('[^A-Za-z0-9-]+', '', fields[1])
             if "id" in line:
-                user_id = fields[1]
-#            if "userName" in line:
-#                user_name = fields[1]
-            
+                user_id = re.sub('[^A-Za-z0-9]+', '', fields[1])
+
     return (desc, user_id)
 
 
 
-get_url()
+desc2, usr_id = get_url()
+
+print(desc2)
+print(usr_id)
