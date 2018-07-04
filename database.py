@@ -46,11 +46,17 @@ def connect_DB():
     cursor = db.cursor()
     
     # execute SQL query using execute() method.
-    cursor.execute("SELECT VERSION()")
+    cursor.execute("SHOW TABLES")
+    
+    sql = """SHOW TABLES"""
+    
     
     # Fetch a single row using fetchone() method.
-    data = cursor.fetchone()
-    print ("Database version : %s " % data)
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    print(results)
+    
+    #print ("Tables List " % data)
     
     # disconnect from server
     db.close()
