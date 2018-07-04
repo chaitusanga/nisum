@@ -7,7 +7,7 @@
                 {
                     "_class": "hudson.model.StringParameterValue",
                     "name": "ENVIRONMENT",
-                    "value": "mcre-28"
+                    "value": "mdsv-03"
                 },
                 {
                     "_class": "hudson.model.StringParameterValue",
@@ -96,9 +96,9 @@
             "causes": [
                 {
                     "_class": "hudson.model.Cause$UserIdCause",
-                    "shortDescription": "Started by user da-MCOM-wdsdevops",
-                    "userId": "da-mcom-wdsdevops",
-                    "userName": "da-MCOM-wdsdevops"
+                    "shortDescription": "Started by user Rajesh Vasamsetty",
+                    "userId": "bh05030",
+                    "userName": "Rajesh Vasamsetty"
                 }
             ]
         },
@@ -112,7 +112,7 @@
             "buildsByBranchName": {
                 "refs/remotes/origin/master": {
                     "_class": "hudson.plugins.git.util.Build",
-                    "buildNumber": 6414,
+                    "buildNumber": 6423,
                     "buildResult": null,
                     "marked": {
                         "SHA1": "f3a1d268706c7d7bbfcb5b23e4ccb2121606033c",
@@ -157,7 +157,7 @@
             "buildsByBranchName": {
                 "refs/remotes/origin/master": {
                     "_class": "hudson.plugins.git.util.Build",
-                    "buildNumber": 6414,
+                    "buildNumber": 6423,
                     "buildResult": null,
                     "marked": {
                         "SHA1": "952ead2685be6a97b333a1decab5f4ef3f6a8c99",
@@ -199,6 +199,7 @@
         {},
         {},
         {},
+        {},
         {
             "_class": "org.jenkinsci.plugins.workflow.job.views.FlowGraphAction"
         },
@@ -206,30 +207,28 @@
         {}
     ],
     "artifacts": [],
-    "building": true,
+    "building": false,
     "changeSets": [],
     "culprits": [],
-    "description": "mcre-28",
-    "displayName": "#6414",
-    "duration": 0,
-    "estimatedDuration": 838937,
-    "executor": {
-        "_class": "hudson.model.OneOffExecutor"
-    },
-    "fullDisplayName": "zeus_creative_recycles #6414",
-    "id": "6414",
+    "description": "mdsv-03",
+    "displayName": "#6423",
+    "duration": 16684571,
+    "estimatedDuration": 9915079,
+    "executor": null,
+    "fullDisplayName": "zeus_creative_recycles #6423",
+    "id": "6423",
     "keepLog": false,
     "nextBuild": {
-        "number": 6415,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6415/"
+        "number": 6424,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6424/"
     },
-    "number": 6414,
+    "number": 6423,
     "previousBuild": {
-        "number": 6413,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6413/"
+        "number": 6422,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6422/"
     },
-    "queueId": 11109,
-    "result": null,
-    "timestamp": 1530670524532,
-    "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6414/"
+    "queueId": 11135,
+    "result": "SUCCESS",
+    "timestamp": 1530671276488,
+    "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6423/"
 }
