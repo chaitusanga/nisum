@@ -18,7 +18,7 @@ def get_url():
     
     URL = "https://fbd-ci.devops.fds.com/jenkins/view/zeus_recycle/job/zeus_creative_recycles/"
     #wfapi_query_string = "/wfapi"
-    json_api_string = "lastBuild/api/json"
+    json_api_string = "api/json"
     
     job_url = URL + json_api_string
     
@@ -27,7 +27,7 @@ def get_url():
     with urllib.request.urlopen(job_url) as url:
         data = json.loads(url.read().decode('utf-8'))
     
-    with open('latest-job-log.json', 'w') as f:
+    with open('job-list-log.json', 'w') as f:
         json.dump(data, f, indent=4, separators=(',', ': '), sort_keys=True)
         f.write('\n')
     

@@ -230,14 +230,14 @@ def insert_db():
             
             #job_val_query = """SELECT count(*) FROM Tasks WHERE Val1 = '%s' AND Val2 = '%s'""" % (Env_ID, Task_Name)
  
-            cur.execute("SELECT COUNT(*) FROM Tasks WHERE Env_ID = '%s' AND Task_Name = '%s'" % (desc, dic['name']))
+#            cur.execute("SELECT COUNT(*) FROM Tasks WHERE Env_ID = '%s' AND Task_Name = '%s'" % (desc, dic['name']))
 #            print(job_query_status)
-            job_query_result=cur.fetchone()
-            job_result = job_query_result[0]
+#            job_query_result=cur.fetchone()
+#            job_result = job_query_result[0]
             
             #print(job_result)
     
-            if job_result == 0:
+#            if job_result == 0:
                 query = """INSERT INTO Tasks (Env_ID, Build_ID, Task_Name, Start_Time, Duration, End_Time, Status) VALUES (\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\");""" % (desc, job_id, dic['name'], start_time_convert, durTime, end_time_convert, job_status)
                 #print(query)
                 cur.execute(query)
