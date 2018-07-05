@@ -15,7 +15,7 @@ import json
 import urllib.request
 import urllib
 
-def get_url():
+def job_ids_list():
     
     URL = "https://fbd-ci.devops.fds.com/jenkins/view/zeus_recycle/job/zeus_creative_recycles"
     
@@ -56,4 +56,4 @@ def get_url():
 
 
 
-get_url()
+job_ids_list()

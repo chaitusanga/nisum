@@ -10,8 +10,8 @@ import json
 import datetime
 import urllib.request
 import urllib
-from pytz import timezone
-import pymysql
+#from pytz import timezone
+#import pymysql
 import re
 import mysql.connector
 
@@ -22,13 +22,14 @@ import mysql.connector
 
 #import sys
 
-job_id = input("Enter the Job ID ")
+#job_id = input("Enter the Job ID ")
 
 #job_id = '6004'
 
 user_id = ' '
 user_name = ' '
-
+obj = []
+job_number = []
 
 import pytz
 
@@ -65,33 +66,17 @@ def job_ids_list():
         obj = json.load(info)
         
         for job in obj['builds']:
-            job_number = str(job['number'])
-            
+            job_num = str(job['number'])
+            #print(job_num)
+            job_number.append(job_num)
+    
+            #print(job_number)
     return(job_number)
 
 
 def connect_DB():
-#    # Open database connection
-#    db = pymysql.connect("localhost","jenkins","nisum@123","jenkins_jobs" )
-#    
-#    # prepare a cursor object using cursor() method
-#    cursor = db.cursor()
-#    
-#    # execute SQL query using execute() method.
-#    #cursor.execute("SHOW TABLES")
-#    
-#    sql = """DESC Build_Info"""
-#    
-#    
-#    # Fetch a single row using fetchone() method.
-#    cursor.execute(sql)
-#    results = cursor.fetchall()
-#    print(results)
-#    
-#    #print ("Tables List " % data)
-#    
-#    # disconnect from server
-#    db.close()
+
+
     conn = mysql.connector.connect(
          user='jenkins',
          password='nisum@123',
@@ -128,15 +113,22 @@ def convertMillis(millis):
 
 
 
-def get_url():
+def get_url(job_id):
+    
+    get_job_id = job_id
+    print(get_job_id)
     
     URL = "https://fbd-ci.devops.fds.com/jenkins/view/zeus_recycle/job/zeus_creative_recycles/"
     wfapi_query_string = "/wfapi"
     json_api_string = "/api/json"
     
-    job_url = URL + job_id + wfapi_query_string
+    job_url = URL + get_job_id + wfapi_query_string
     
-    build_url = URL + job_id
+    build_url = URL + get_job_id
+    
+#    print(job_url)
+#    print(build_url)
+    
     
     ####Getting wfapi data####
     
@@ -147,7 +139,8 @@ def get_url():
         json.dump(data, f, indent=4, separators=(',', ': '), sort_keys=True)
         f.write('\n')
     
-    user_info_url = URL + job_id + json_api_string
+    user_info_url = URL + get_job_id + json_api_string
+#    print(user_info_url)
     
     ####Getting json api data####
     
@@ -171,16 +164,16 @@ def get_url():
                 job_timestamp = re.sub('[^A-Za-z0-9 ]+', '', fields[1])
             
             
-    return (build_url, desc, user_id, user_name, job_timestamp)
+    return (job_id, build_url, desc, user_id, user_name, job_timestamp)
 
 
 #https://fbd-ci.devops.fds.com/jenkins/view/zeus_recycle/job/zeus_creative_recycles/5763/api/json?pretty=true
 
 
-def insert_db():
+def insert_db(job_ids):
 
     #user_id, user_name = get_url()
-    build_url, desc, user_id, user_name, job_timestamp = get_url()
+    job_id, build_url, desc, user_id, user_name, job_timestamp = get_url(job_ids)
     #build_url = mdb.escape_string(build_url)
     
 #    print(type(build_url))
@@ -196,27 +189,9 @@ def insert_db():
     allItems = x['stages']
     #html_file_name = 'log.html'
     
-    conn = mysql.connector.connect(
-            user='jenkins',
-            password='nisum@123',
-            host='localhost',
-            database='jenkins_jobs')
+
     
-    
-    ##### Insert into Build_Info table
-    
-    cur = conn.cursor()
-    query = """INSERT INTO Build_Info (Env_ID, Build_ID, User_ID, User_Name, Build_URL) VALUES (\"%s\",\"%s\",\"%s\",\"%s\",\"%s\");""" % (desc, job_id, user_id, user_name, build_url)
-    #print(query)
-    try:
-        cur.execute(query)
-        conn.commit()
-    except:
-        conn.rollback()
-    
-    conn.close()
-    
-    ##### Insert into Build_Info table
+
     
     for dic in allItems:
         
@@ -236,10 +211,33 @@ def insert_db():
         job_time_date = datetime.datetime.fromtimestamp(job_time).strftime('%Y-%m-%d') 
         #print(job_time_date)
         
+
+        ##### Insert into Build_Info table
+        
+        conn = mysql.connector.connect(
+        user='jenkins',
+        password='nisum@123',
+        host='localhost',
+        database='jenkins_jobs')
+
+        
+        cur = conn.cursor()
+        query = """INSERT INTO Build_Info (Env_ID, Build_ID, Build_Date, User_ID, User_Name, Build_URL) VALUES (\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\");""" % (desc, job_id, job_time_date, user_id, user_name, build_url)
+        #print(query)
+        try:
+            cur.execute(query)
+            conn.commit()
+        except:
+            conn.rollback()
+        
+        conn.close()
+        
+        
         
         job_status = str(dic['status'])
         
-        
+    ##### Insert into Tasks table        
+    
         conn = mysql.connector.connect(
             user='jenkins',
             password='nisum@123',
@@ -251,16 +249,6 @@ def insert_db():
         
         try:
             
-            #job_val_query = """SELECT count(*) FROM Tasks WHERE Val1 = '%s' AND Val2 = '%s'""" % (Env_ID, Task_Name)
- 
-#            cur.execute("SELECT COUNT(*) FROM Tasks WHERE Env_ID = '%s' AND Task_Name = '%s'" % (desc, dic['name']))
-#            print(job_query_status)
-#            job_query_result=cur.fetchone()
-#            job_result = job_query_result[0]
-            
-            #print(job_result)
-    
-#            if job_result == 0:
                 query = """INSERT INTO Tasks (Env_ID, Build_ID, Task_Name, Start_Time, Duration, End_Time, Status) VALUES (\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\");""" % (desc, job_id, dic['name'], start_time_convert, durTime, end_time_convert, job_status)
                 #print(query)
                 cur.execute(query)
@@ -275,8 +263,12 @@ def insert_db():
 
 
 jobs_list = job_ids_list()
+print(jobs_list)
+
+#job_ids_list()
 for ids in jobs_list:
     get_url(ids)
+    insert_db(ids)
 #get_url()
-insert_db()
+#insert_db()
 #connect_DB()

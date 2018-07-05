@@ -7,7 +7,7 @@
                 {
                     "_class": "hudson.model.StringParameterValue",
                     "name": "ENVIRONMENT",
-                    "value": "bcre-34"
+                    "value": "bcre-35"
                 },
                 {
                     "_class": "hudson.model.StringParameterValue",
@@ -27,7 +27,7 @@
                 {
                     "_class": "hudson.model.BooleanParameterValue",
                     "name": "RUN_DATA_LOAD",
-                    "value": false
+                    "value": true
                 },
                 {
                     "_class": "hudson.model.BooleanParameterValue",
@@ -96,9 +96,9 @@
             "causes": [
                 {
                     "_class": "hudson.model.Cause$UserIdCause",
-                    "shortDescription": "Started by user Shabnam Bhanu",
-                    "userId": "bh04962",
-                    "userName": "Shabnam Bhanu"
+                    "shortDescription": "Started by user da-MCOM-wdsdevops",
+                    "userId": "da-mcom-wdsdevops",
+                    "userName": "da-MCOM-wdsdevops"
                 }
             ]
         },
@@ -112,7 +112,7 @@
             "buildsByBranchName": {
                 "refs/remotes/origin/master": {
                     "_class": "hudson.plugins.git.util.Build",
-                    "buildNumber": 6444,
+                    "buildNumber": 6400,
                     "buildResult": null,
                     "marked": {
                         "SHA1": "f3a1d268706c7d7bbfcb5b23e4ccb2121606033c",
@@ -157,7 +157,7 @@
             "buildsByBranchName": {
                 "refs/remotes/origin/master": {
                     "_class": "hudson.plugins.git.util.Build",
-                    "buildNumber": 6444,
+                    "buildNumber": 6400,
                     "buildResult": null,
                     "marked": {
                         "SHA1": "952ead2685be6a97b333a1decab5f4ef3f6a8c99",
@@ -210,25 +210,25 @@
     "building": false,
     "changeSets": [],
     "culprits": [],
-    "description": "bcre-34",
-    "displayName": "#6444",
-    "duration": 8565610,
+    "description": "bcre-35",
+    "displayName": "#6400",
+    "duration": 12251682,
     "estimatedDuration": 12482614,
     "executor": null,
-    "fullDisplayName": "zeus_creative_recycles #6444",
-    "id": "6444",
+    "fullDisplayName": "zeus_creative_recycles #6400",
+    "id": "6400",
     "keepLog": false,
     "nextBuild": {
-        "number": 6445,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6445/"
+        "number": 6401,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6401/"
     },
-    "number": 6444,
+    "number": 6400,
     "previousBuild": {
-        "number": 6443,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6443/"
+        "number": 6399,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6399/"
     },
-    "queueId": 11656,
+    "queueId": 11083,
     "result": "SUCCESS",
-    "timestamp": 1530757201258,
-    "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6444/"
+    "timestamp": 1530667829077,
+    "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6400/"
 }
