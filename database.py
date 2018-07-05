@@ -144,8 +144,11 @@ def get_url():
                 user_id = re.sub('[^A-Za-z0-9-]+', '', fields[1])
             if "userName" in line:
                 user_name = re.sub('[^A-Za-z0-9 ]+', '', fields[1])
+            if "timestamp" in line:
+                job_timestamp = re.sub('[^A-Za-z0-9 ]+', '', fields[1])
             
-    return (build_url, desc, user_id, user_name)
+            
+    return (build_url, desc, user_id, user_name, job_timestamp)
 
 
 #https://fbd-ci.devops.fds.com/jenkins/view/zeus_recycle/job/zeus_creative_recycles/5763/api/json?pretty=true
@@ -154,13 +157,13 @@ def get_url():
 def insert_db():
 
     #user_id, user_name = get_url()
-    build_url, desc, user_id, user_name = get_url()
+    build_url, desc, user_id, user_name, job_timestamp = get_url()
     #build_url = mdb.escape_string(build_url)
     
-    print(type(build_url))
-    print(type(desc))
-    print(type(user_id))
-    print(type(user_name))
+#    print(type(build_url))
+#    print(type(desc))
+#    print(type(user_id))
+#    print(type(user_name))
     
     
     with open('jenkins-log.json', 'r') as f:
@@ -190,7 +193,8 @@ def insert_db():
     
     conn.close()
     
-
+    ##### Insert into Build_Info table
+    
     for dic in allItems:
         
         startTime = dic['startTimeMillis'] / 1000.0
@@ -204,6 +208,10 @@ def insert_db():
         endTime = (dic['startTimeMillis'] + dic['durationMillis']) / 1000.0            
         end_timeStamp = datetime.datetime.fromtimestamp(endTime).strftime('%Y-%m-%d %H:%M:%S')            
         end_time_convert = convert_datetime_timezone(end_timeStamp, "Asia/Kolkata", "PST8PDT")
+        
+        job_time = float(job_timestamp) / 1000.0            
+        job_time_date = datetime.datetime.fromtimestamp(job_time).strftime('%Y-%m-%d') 
+        #print(job_time_date)
         
         
         job_status = str(dic['status'])
@@ -222,10 +230,14 @@ def insert_db():
             
             #job_val_query = """SELECT count(*) FROM Tasks WHERE Val1 = '%s' AND Val2 = '%s'""" % (Env_ID, Task_Name)
  
-            job_query_status = cur.execute("""SELECT count(*) FROM Tasks WHERE Val1 = '%s' AND Val2 = '%s'""" % (desc, dic['name']))
+            cur.execute("SELECT COUNT(*) FROM Tasks WHERE Env_ID = '%s' AND Task_Name = '%s'" % (desc, dic['name']))
+#            print(job_query_status)
+            job_query_result=cur.fetchone()
+            job_result = job_query_result[0]
+            
+            #print(job_result)
     
-    
-            if job_query_status == 0:
+            if job_result == 0:
                 query = """INSERT INTO Tasks (Env_ID, Build_ID, Task_Name, Start_Time, Duration, End_Time, Status) VALUES (\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\");""" % (desc, job_id, dic['name'], start_time_convert, durTime, end_time_convert, job_status)
                 #print(query)
                 cur.execute(query)
