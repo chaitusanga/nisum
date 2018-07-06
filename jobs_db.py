@@ -30,6 +30,12 @@ user_id = ' '
 user_name = ' '
 obj = []
 job_number = []
+jobs_info = []
+resultset = []
+result = []
+task_result = []
+tasks_info = []
+
 
 import pytz
 
@@ -232,6 +238,7 @@ def insert_db(job_ids):
         except:
             conn.rollback()
         
+        cur.close()
         conn.close()
         
         
@@ -259,18 +266,139 @@ def insert_db(job_ids):
         except:
             conn.rollback()
         
+        cur.close()    
+        conn.close()
         
-    conn.close()
         
+        
+        
+def get_db_build_data(jobid):
+    
+    
+    conn1 = mysql.connector.connect(
+    user='jenkins',
+    password='nisum@123',
+    host='localhost',
+    database='jenkins_jobs')
+    
+    cur1 = conn1.cursor()
+    
+
+    try:
+    
+        cur1.execute("SELECT Env_ID, Build_ID, Build_Date, User_ID, User_Name, Build_URL FROM Build_Info WHERE Build_ID = "+ jobid)
+        result = cur1.fetchall()
+            
+    except:
+        print("Job ID "+ jobid + "not selected")
+       
+        
+    cur1.close()
+    conn1.close()
+
+    return(result)
 
 
-jobs_list = job_ids_list()
+def get_db_task_data(jobid):
+    
+    conn1 = mysql.connector.connect(
+    user='jenkins',
+    password='nisum@123',
+    host='localhost',
+    database='jenkins_jobs')
+    
+    cur1 = conn1.cursor()
+    
+
+    try:
+    
+        cur1.execute("SELECT Env_ID, Build_ID, Task_Name, Start_Time, Duration, End_Time, Status FROM Tasks WHERE Build_ID = "+ jobid)
+        task_result = cur1.fetchall()
+        
+    except:
+        print("Job ID" + jobid + "not found")
+
+    cur1.close()
+    conn1.close()
+
+    return(task_result)
+
+
+def display_db_build_data(jobs_info):
+    
+    resultset = jobs_info
+    html_file_name = 'build_info.html'
+    
+    with open(html_file_name, 'w') as myFile:
+        
+        myFile.write('<html>')
+        myFile.write('<head>')
+        myFile.write('<style>')
+        myFile.write('table, th, td {border: 1px solid black;}')
+        myFile.write('</style>')
+        myFile.write('</head>')
+        
+        
+        myFile.write('<body>')
+        
+        myFile.write('<h2> Jenkins Job Information </h2>')
+
+        myFile.write('<table style="width:100%">')
+        
+        myFile.write('<tr>')
+        myFile.write('<th>Env ID</th>')
+        myFile.write('<th>Job ID</th>')            
+        myFile.write('<th>Date</th>')
+        myFile.write('<th>User ID</th>')
+        myFile.write('<th>User Name</th>')
+        myFile.write('<th>URL</th>')
+        myFile.write('</tr>')
+        
+        for row in resultset:
+
+            myFile.write('<tr>')
+            myFile.write('<td>'+ str(row[0]) +'</td>')
+            myFile.write('<td>'+ str(row[1]) +'</td>')            
+            myFile.write('<td>'+ str(row[2]) +'</td>')     
+            myFile.write('<td>'+ str(row[3]) +'</td>') 
+            myFile.write('<td>'+ str(row[4]) +'</td>') 
+            myFile.write('<td>'+ str(row[5]) +'</td>') 
+            myFile.write('</tr>')
+                
+        myFile.write('</table>')
+        myFile.write('</body>')
+        myFile.write('</html>')              
+
+
+#jobs_list = job_ids_list()
 #print(jobs_list)
 
+#jobs_list = ['6470', '6469', '6468', '6467', '6466', '6465', '6464', '6463', '6462', '6461', '6460', '6459', '6458', '6457', '6456', '6455', '6454', '6453', '6452', '6451', '6450', '6449', '6448', '6447', '6446', '6445', '6444', '6443', '6442', '6441', '6440', '6439', '6438', '6437', '6436', '6435', '6434', '6433', '6432', '6431', '6430', '6429', '6428', '6427', '6426', '6425', '6424', '6423', '6422', '6421', '6420', '6419', '6418', '6417', '6416', '6415', '6414', '6413', '6412', '6411', '6410', '6409', '6408', '6407', '6406', '6405', '6404', '6403', '6402', '6401', '6400', '6399', '6398', '6397', '6396', '6395', '6394', '6393', '6392', '6391', '6390', '6389', '6388', '6387', '6386', '6385', '6384', '6383', '6382', '6381', '6380', '6379', '6378', '6377', '6376', '6375', '6374', '6373', '6372', '6371']
+
+
 #job_ids_list()
-for ids in jobs_list:
-    get_url(ids)
-    insert_db(ids)
+#for ids in jobs_list:
+#    #get_url(ids)
+#    #insert_db(ids)
+#    jobs_info = get_db_data(ids)
+#    
+
+job_id = input("Enter the Job ID ")
+
+job_info = get_db_build_data(job_id)
+display_db_build_data(job_info)
+
+tasks_info = get_db_task_data(job_id)
+
+print(tasks_info)
+
+#    for row in jobs_info:
+#        print(row[0], row[1], row[2], row[3], row[4], row[5])
+
+
+
+
+
 #get_url()
 #insert_db()
 #connect_DB()
