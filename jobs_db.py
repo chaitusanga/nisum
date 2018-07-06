@@ -116,7 +116,7 @@ def convertMillis(millis):
 def get_url(job_id):
     
     get_job_id = job_id
-    print(get_job_id)
+    #print(get_job_id)
     
     URL = "https://fbd-ci.devops.fds.com/jenkins/view/zeus_recycle/job/zeus_creative_recycles/"
     wfapi_query_string = "/wfapi"
@@ -190,6 +190,8 @@ def insert_db(job_ids):
     #html_file_name = 'log.html'
     
 
+######################JOB VALIDATION ------> to be done on 07/06
+    ##################VALIDATE AND PUSH TO HTML ----> TO BE DONE ON 07/06
     
 
     
@@ -263,7 +265,7 @@ def insert_db(job_ids):
 
 
 jobs_list = job_ids_list()
-print(jobs_list)
+#print(jobs_list)
 
 #job_ids_list()
 for ids in jobs_list:

@@ -7,22 +7,22 @@
                 {
                     "_class": "hudson.model.StringParameterValue",
                     "name": "ENVIRONMENT",
-                    "value": "bcre-35"
+                    "value": "mpre-slp"
                 },
                 {
                     "_class": "hudson.model.StringParameterValue",
                     "name": "BRAND",
-                    "value": "BCOM"
+                    "value": "MCOM"
                 },
                 {
                     "_class": "hudson.model.StringParameterValue",
                     "name": "UPDATE_CUSTOM_DATE",
-                    "value": "NO_UPDATE"
+                    "value": "2018-08-03"
                 },
                 {
                     "_class": "hudson.model.StringParameterValue",
                     "name": "BLUE_PRINT",
-                    "value": "bcom_site_creative"
+                    "value": "mcom_site_creative"
                 },
                 {
                     "_class": "hudson.model.BooleanParameterValue",
@@ -112,7 +112,7 @@
             "buildsByBranchName": {
                 "refs/remotes/origin/master": {
                     "_class": "hudson.plugins.git.util.Build",
-                    "buildNumber": 6400,
+                    "buildNumber": 6371,
                     "buildResult": null,
                     "marked": {
                         "SHA1": "f3a1d268706c7d7bbfcb5b23e4ccb2121606033c",
@@ -157,7 +157,7 @@
             "buildsByBranchName": {
                 "refs/remotes/origin/master": {
                     "_class": "hudson.plugins.git.util.Build",
-                    "buildNumber": 6400,
+                    "buildNumber": 6371,
                     "buildResult": null,
                     "marked": {
                         "SHA1": "952ead2685be6a97b333a1decab5f4ef3f6a8c99",
@@ -210,25 +210,25 @@
     "building": false,
     "changeSets": [],
     "culprits": [],
-    "description": "bcre-35",
-    "displayName": "#6400",
-    "duration": 12251682,
+    "description": "mpre-slp",
+    "displayName": "#6371",
+    "duration": 18107510,
     "estimatedDuration": 12482614,
     "executor": null,
-    "fullDisplayName": "zeus_creative_recycles #6400",
-    "id": "6400",
+    "fullDisplayName": "zeus_creative_recycles #6371",
+    "id": "6371",
     "keepLog": false,
     "nextBuild": {
-        "number": 6401,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6401/"
+        "number": 6372,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6372/"
     },
-    "number": 6400,
+    "number": 6371,
     "previousBuild": {
-        "number": 6399,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6399/"
+        "number": 6370,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6370/"
     },
-    "queueId": 11083,
+    "queueId": 10555,
     "result": "SUCCESS",
-    "timestamp": 1530667829077,
-    "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6400/"
+    "timestamp": 1530585030620,
+    "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6371/"
 }
