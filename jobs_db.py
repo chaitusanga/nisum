@@ -299,31 +299,6 @@ def get_db_build_data(jobid):
     return(result)
 
 
-def get_db_task_data(jobid):
-    
-    conn1 = mysql.connector.connect(
-    user='jenkins',
-    password='nisum@123',
-    host='localhost',
-    database='jenkins_jobs')
-    
-    cur1 = conn1.cursor()
-    
-
-    try:
-    
-        cur1.execute("SELECT Env_ID, Build_ID, Task_Name, Start_Time, Duration, End_Time, Status FROM Tasks WHERE Build_ID = "+ jobid)
-        task_result = cur1.fetchall()
-        
-    except:
-        print("Job ID" + jobid + "not found")
-
-    cur1.close()
-    conn1.close()
-
-    return(task_result)
-
-
 def display_db_build_data(jobs_info):
     
     resultset = jobs_info
@@ -366,8 +341,148 @@ def display_db_build_data(jobs_info):
             myFile.write('</tr>')
                 
         myFile.write('</table>')
+#        myFile.write('</body>')
+#        myFile.write('</html>')              
+
+
+def get_db_task_data(jobid):
+    
+    conn1 = mysql.connector.connect(
+    user='jenkins',
+    password='nisum@123',
+    host='localhost',
+    database='jenkins_jobs')
+    
+    cur1 = conn1.cursor()
+    
+
+    try:
+    
+        cur1.execute("SELECT Env_ID, Build_ID, Task_Name, Start_Time, Duration, End_Time, Status FROM Tasks WHERE Build_ID = "+ jobid)
+        task_result = cur1.fetchall()
+        
+    except:
+        print("Job ID" + jobid + "not found")
+
+    cur1.close()
+    conn1.close()
+
+    return(task_result)
+
+
+
+def display_db_task_data(tasks_info):
+    
+    task_resultset = tasks_info
+    
+    flag = 0
+    html_file_name = 'build_info.html'
+    
+    with open(html_file_name, 'a') as myFile:
+        
+#        myFile.write('<html>')
+#        myFile.write('<head>')
+#        myFile.write('<style>')
+#        myFile.write('table, th, td {border: 1px solid black;}')
+#        myFile.write('</style>')
+#        myFile.write('</head>')
+#        
+#        
+#        myFile.write('<body>')
+#        
+        myFile.write('<h2> Jenkins Job\'s Tasks Information </h2>')
+#        myFile.write('<p> <b> Environment: </b>' + desc + '</p>')
+#        myFile.write('<p> <b> Build No.: </b>' + job_id + '</p>')
+#        myFile.write('<p> <b> UserId: </b>' + user_id + '</p>')
+#        myFile.write('<p> <b> User Name: </b>' + user_name + '</p>')
+        
+        
+        myFile.write('<table style="width:100%">')
+        
+        
+        myFile.write('<tr>')
+        myFile.write('<th colspan="2">Task</th>')
+        myFile.write('<th>Start Time</th>')            
+        myFile.write('<th>Duration</th>')
+        myFile.write('<th>End Time</th>')
+        myFile.write('<th>Status</th>')
+        myFile.write('</tr>')
+        
+        
+        for row in task_resultset:
+                
+            if flag == 0:                
+                
+                myFile.write('<tr>')
+                
+#                myFile.write('<td>'+ str(row[0]) +'</td>')
+#                myFile.write('<td>'+ str(row[1]) +'</td>')
+                
+                if str(row[2]) == "Recycle":
+                    myFile.write('<td rowspan="4">' + str(row[2]) + '</td>')
+                    continue
+                
+                if str(row[2]) == "Recycle web":
+                    myFile.write('<td rowspan="3">' + str(row[2]) + '</td>')
+                    continue
+                
+                if str(row[2]) == "Recycle Customer" or str(row[2]) == "Recycle Order" or str(row[2]) == "Recycle Promotion":
+                    myFile.write('<td>' + str(row[2]) + '</td>')
+                    
+                elif str(row[2]) == "Recycle WSSG" or str(row[2]) == "Recycle NavApp":
+                    myFile.write('<td>' + str(row[2]) + '</td>')
+                    
+                else:
+                    myFile.write('<td colspan="2">' + str(row[2]) + '</td>')
+                myFile.write('<td>' + str(row[3]) + " PST" + '</td>')            
+                myFile.write('<td>' + str(row[4]) + '</td>')     
+                myFile.write('<td>' + str(row[5]) + " PST" + '</td>') 
+                
+                job_status = str(row[6])
+    
+                if job_status == "NOT_EXECUTED":
+                    myFile.write('<td style="background-color:Cyan;">' + str(row[6]) + '</td>')
+                    myFile.write('</tr>')
+                    flag = 0
+                elif job_status == "FAILED" and str(row[2]) == "Recycle Order":
+                    myFile.write('<td style="background-color:Red;">' + str(row[6]) + '</td>')
+                    myFile.write('</tr>')
+                    flag = 1
+                else:
+                    myFile.write('<td>' + str(row[6]) + '</td>')
+                    myFile.write('</tr>')
+
+            else:
+                myFile.write('<tr>')
+                
+                if str(row[2]) == "Recycle":
+                    myFile.write('<td rowspan="4">' + str(row[2]) + '</td>')
+                    continue
+                
+                if str(row[2]) == "Recycle web":
+                    myFile.write('<td rowspan="3">' + str(row[2]) + '</td>')
+                    continue
+                
+                if str(row[2]) == "Recycle Customer" or str(row[2]) == "Recycle Order" or str(row[2]) == "Recycle Promotion":
+                    myFile.write('<td>' + str(row[2]) + '</td>')
+                    
+                elif str(row[2]) == "Recycle WSSG" or str(row[2]) == "Recycle NavApp":
+                    myFile.write('<td>' + str(row[2]) + '</td>')
+                    
+                else:
+                    myFile.write('<td colspan="2">' + str(row[2]) + '</td>')
+                
+                myFile.write('<td>' + str(row[3]) + " PST" + '</td>')            
+                myFile.write('<td>' + str(row[4]) + '</td>')     
+                myFile.write('<td>' + str(row[5]) + " PST" + '</td>') 
+                myFile.write('<td>'+ " " +'</td>')
+                
+                myFile.write('</tr>')
+                
+        myFile.write('</table>')
         myFile.write('</body>')
-        myFile.write('</html>')              
+        myFile.write('</html>')
+
 
 
 #jobs_list = job_ids_list()
@@ -389,8 +504,8 @@ job_info = get_db_build_data(job_id)
 display_db_build_data(job_info)
 
 tasks_info = get_db_task_data(job_id)
-
-print(tasks_info)
+display_db_task_data(tasks_info)
+#print(tasks_info)
 
 #    for row in jobs_info:
 #        print(row[0], row[1], row[2], row[3], row[4], row[5])
