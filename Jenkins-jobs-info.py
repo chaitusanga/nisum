@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Thu Jun 21 12:21:26 2018
+Created on Mon Jul  9 12:21:26 2018
 
 @author: Chaitanya Sanga
 """
@@ -13,7 +13,6 @@ import urllib
 import re
 import mysql.connector
 import pytz
-
 
 
 user_id = ' '
@@ -118,8 +117,7 @@ def get_url(job_id):
                 job_timestamp = re.sub('[^A-Za-z0-9 ]+', '', fields[1])
             if "result" in line:
                 status = re.sub('[^A-Za-z0-9 ]+', '', fields[1])
-            
-            
+        
     return (job_id, build_url, desc, user_id, user_name, job_timestamp, status)
 
 
