@@ -5,26 +5,16 @@ Created on Thu Jun 21 12:21:26 2018
 
 @author: Chaitanya Sanga
 """
-#import HTML
+
 import json
 import datetime
 import urllib.request
 import urllib
-#from pytz import timezone
-#import pymysql
 import re
 import mysql.connector
-
-#from mysql.connector import MySQLConnection, Error
-#from python_mysql_dbconfig import read_db_config
+import pytz
 
 
-
-#import sys
-
-#job_id = input("Enter the Job ID ")
-
-#job_id = '6004'
 
 user_id = ' '
 user_name = ' '
@@ -37,8 +27,6 @@ result = []
 task_result = []
 tasks_info = []
 
-
-import pytz
 
 def convert_datetime_timezone(dt, tz1, tz2):
     tz1 = pytz.timezone(tz1)
@@ -60,8 +48,6 @@ def job_ids_list():
     
     user_info_url = URL + json_api_string
     
-    ####Getting json api data####
-    
     with urllib.request.urlopen(user_info_url) as user_url:
         user_data = json.loads(user_url.read().decode('utf-8'))
     
@@ -74,34 +60,9 @@ def job_ids_list():
         
         for job in obj['builds']:
             job_num = str(job['number'])
-            #print(job_num)
             job_number.append(job_num)
-    
-            #print(job_number)
+            
     return(job_number)
-
-
-def connect_DB():
-
-
-    conn = mysql.connector.connect(
-         user='jenkins',
-         password='nisum@123',
-         host='localhost',
-         database='jenkins_jobs')
-    
-    cur = conn.cursor()
-    query = ("SELECT * FROM Build_Info")
-    
-    cur.execute(query)
-    
-    for (Env_ID, Build_ID, User_ID, User_Name, Build_URL) in cur:
-        print("{}, {}, {}, {}".format(Env_ID, Build_ID, User_ID, User_Name, Build_URL))
-        
-    cur.close()
-    conn.close()
-    
-
 
 
 def convertMillis(millis):
@@ -113,17 +74,10 @@ def convertMillis(millis):
     hours = (millis / (1000*60*60)) % 24
     hours = int(hours)
 
-    return(hours, minutes, seconds)
-
-########### End of convertMillis() ###########
-
-
-
 
 def get_url(job_id):
     
     get_job_id = job_id
-    #print(get_job_id)
     
     URL = "https://fbd-ci.devops.fds.com/jenkins/view/zeus_recycle/job/zeus_creative_recycles/"
     wfapi_query_string = "/wfapi"
@@ -133,12 +87,6 @@ def get_url(job_id):
     
     build_url = URL + get_job_id
     
-#    print(job_url)
-#    print(build_url)
-    
-    
-    ####Getting wfapi data####
-    
     with urllib.request.urlopen(job_url) as url:
         data = json.loads(url.read().decode('utf-8'))
     
@@ -147,10 +95,7 @@ def get_url(job_id):
         f.write('\n')
     
     user_info_url = URL + get_job_id + json_api_string
-#    print(user_info_url)
-    
-    ####Getting json api data####
-    
+
     with urllib.request.urlopen(user_info_url) as user_url:
         user_data = json.loads(user_url.read().decode('utf-8'))
     
@@ -176,21 +121,9 @@ def get_url(job_id):
     return (job_id, build_url, desc, user_id, user_name, job_timestamp, status)
 
 
-#https://fbd-ci.devops.fds.com/jenkins/view/zeus_recycle/job/zeus_creative_recycles/5763/api/json?pretty=true
-
-
 def insert_db(job_ids):
 
-    #user_id, user_name = get_url()
     job_id, build_url, desc, user_id, user_name, job_timestamp, status = get_url(job_ids)
-    
-    #build_url = mdb.escape_string(build_url)
-    
-#    print(type(build_url))
-#    print(type(desc))
-#    print(type(user_id))
-#    print(type(user_name))
-    
     
     with open('jenkins-log.json', 'r') as f:
         obj = f.read()
@@ -198,12 +131,6 @@ def insert_db(job_ids):
     
     allItems = x['stages']
    
-    #html_file_name = 'log.html'
-    
-
-######################JOB VALIDATION ------> to be done on 07/06
-    ##################VALIDATE AND PUSH TO HTML ----> TO BE DONE ON 07/06
-    
 
     conn = mysql.connector.connect(
     user='jenkins',
@@ -221,8 +148,6 @@ def insert_db(job_ids):
 
     if job_exist[0] == 0:
         
-        ##### Insert into Build_Info table
-        
         cur1 = conn.cursor()
         
         try:
@@ -230,158 +155,57 @@ def insert_db(job_ids):
             query = """INSERT INTO Build_Info (Env_ID, Build_ID, Build_Date, User_ID, User_Name, Build_URL, Status) VALUES (\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\");""" % (desc, job_id, job_time_date, user_id, user_name, build_url, status)
             cur1.execute(query)
             conn.commit()
-            print("Successfully inserted Build ID into Build_Info---> " + job_id)
             
         except:
             
-            print("Job not inserted in Build_Info ----> " + job_id)
             conn.rollback()
 
         cur1.close()
 
     
-#    for dic in allItems:
-#        
-#        startTime = dic['startTimeMillis'] / 1000.0
-#        start_timeStamp = datetime.datetime.fromtimestamp(startTime).strftime('%Y-%m-%d %H:%M:%S')
-#        start_time_convert = convert_datetime_timezone(start_timeStamp, "Asia/Kolkata", "PST8PDT")
-#        start_time_convert = start_time_convert + "PST"
-#        
-#        con_hour, con_min, con_sec = convertMillis(dic['durationMillis'])
-#        durTime = str(con_hour) + "Hrs " + str(con_min) + "Min " + str(con_sec) + "Sec"
-#
-#
-#        endTime = (dic['startTimeMillis'] + dic['durationMillis']) / 1000.0            
-#        end_timeStamp = datetime.datetime.fromtimestamp(endTime).strftime('%Y-%m-%d %H:%M:%S')            
-#        end_time_convert = convert_datetime_timezone(end_timeStamp, "Asia/Kolkata", "PST8PDT")
-#        end_time_convert = end_time_convert + "PST"
-#        
-#        
-#        #print(dic)
-#
-#
-#
-#        
-#
-#        #print(job_time_date)
-# 
-#        ########validate job in the db before insert ######
-#        
-#        conn = mysql.connector.connect(
-#        user='jenkins',
-#        password='nisum@123',
-#        host='localhost',
-#        database='jenkins_jobs')
-#
-#        
-#
-#                
-#                ##### Insert into Tasks table  
-#                
-#        job_status = str(dic['status'])
-#        
-#        #print(desc, job_id, dic['name'], start_time_convert, durTime, end_time_convert, job_status)
-#
-#        
-#        cur2 = conn.cursor()
-#
-#        try:
-#    
-#            query = """INSERT INTO Tasks (Env_ID, Build_ID, Task_Name, Start_Time, Duration, End_Time, Status) VALUES (\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\");""" % (desc, job_id, dic['name'], start_time_convert, durTime, end_time_convert, job_status)
-#            cur2.execute(query)
-#            conn.commit()
-#            print("Successfully inserted Build ID into Tasks---> " + job_id + dic['name'])
-#            
-#        except:
-#            
-#            print("Job not inserted in Tasks ----> " + job_id + dic['name'])
-#            conn.rollback()
-#
-#        cur2.close()  
-#
-#        conn.close()
+    for dic in allItems:
+        
+        startTime = dic['startTimeMillis'] / 1000.0
+        start_timeStamp = datetime.datetime.fromtimestamp(startTime).strftime('%Y-%m-%d %H:%M:%S')
+        start_time_convert = convert_datetime_timezone(start_timeStamp, "Asia/Kolkata", "PST8PDT")
+        start_time_convert = start_time_convert + "PST"
+        
+        con_hour, con_min, con_sec = convertMillis(dic['durationMillis'])
+        durTime = str(con_hour) + "Hrs " + str(con_min) + "Min " + str(con_sec) + "Sec"
 
-#        ##### Insert into Build_Info table
-#        
-#        conn = mysql.connector.connect(
-#        user='jenkins',
-#        password='nisum@123',
-#        host='localhost',
-#        database='jenkins_jobs')
 
-        
-#        cur = conn.cursor()
-#        query = """INSERT INTO Build_Info (Env_ID, Build_ID, Build_Date, User_ID, User_Name, Build_URL) VALUES (\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\");""" % (desc, job_id, job_time_date, user_id, user_name, build_url)
-#        #print(query)
-#        try:
-#            cur.execute(query)
-#            conn.commit()
-#        except:
-#            conn.rollback()
-#        
-#        cur.close()
-#        conn.close()
+        endTime = (dic['startTimeMillis'] + dic['durationMillis']) / 1000.0            
+        end_timeStamp = datetime.datetime.fromtimestamp(endTime).strftime('%Y-%m-%d %H:%M:%S')            
+        end_time_convert = convert_datetime_timezone(end_timeStamp, "Asia/Kolkata", "PST8PDT")
+        end_time_convert = end_time_convert + "PST"
         
         
+        conn = mysql.connector.connect(
+        user='jenkins',
+        password='nisum@123',
+        host='localhost',
+        database='jenkins_jobs')
+
+            
+        job_status = str(dic['status'])
         
-#        job_status = str(dic['status'])
-#        
-#    ##### Insert into Tasks table        
-#    
-#        conn = mysql.connector.connect(
-#            user='jenkins',
-#            password='nisum@123',
-#            host='localhost',
-#            database='jenkins_jobs')
-#        
-#        
-#        cur = conn.cursor()
-#        
-#        try:
-#            
-#                query = """INSERT INTO Tasks (Env_ID, Build_ID, Task_Name, Start_Time, Duration, End_Time, Status) VALUES (\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\");""" % (desc, job_id, dic['name'], start_time_convert, durTime, end_time_convert, job_status)
-#                #print(query)
-#                cur.execute(query)
-#                conn.commit()
-#
-#        except:
-#            conn.rollback()
-#        
-#        cur.close()    
-#        conn.close()
-        
-#        cur = conn.cursor()
-        #query = """INSERT INTO Build_Info (Env_ID, Build_ID, Build_Date, User_ID, User_Name, Build_URL) VALUES (\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\");""" % (desc, job_id, job_time_date, user_id, user_name, build_url)
-        #print(query)
-        
-#            cur = conn.cursor()
-#            cur.execute("SELECT COUNT(Build_ID) FROM Build_Info WHERE Build_ID = "+ job_id)
-#            job_exist = cur.fetchone()
-#        
-#        
-#            if job_exist[0] == 0:
-#                
-#                ##### Insert into Build_Info table
-#                
-#                cur1 = conn.cursor()
-#                
-#                try:
-#                    
-#                    query = """INSERT INTO Build_Info (Env_ID, Build_ID, Build_Date, User_ID, User_Name, Build_URL) VALUES (\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\");""" % (desc, job_id, job_time_date, user_id, user_name, build_url)
-#                    cur1.execute(query)
-#                    conn.commit()
-#                    print("Successfully inserted Build ID into Build_Info---> " + job_id)
-#                    
-#                except:
-#                    
-#                    print("Job not inserted in Tasks ----> " + job_id)
-#                    conn.rollback()
-#        
-#                cur1.close()
-        
-        
-        
-        
+        cur2 = conn.cursor()
+
+        try:
+    
+            query = """INSERT INTO Tasks (Env_ID, Build_ID, Task_Name, Start_Time, Duration, End_Time, Status) VALUES (\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\");""" % (desc, job_id, dic['name'], start_time_convert, durTime, end_time_convert, job_status)
+            cur2.execute(query)
+            conn.commit()
+            
+        except:
+            
+            conn.rollback()
+
+        cur2.close()  
+
+        conn.close()
+
+
 def get_db_build_data(jobid):
     
     
@@ -396,10 +220,11 @@ def get_db_build_data(jobid):
 
     try:
     
-        cur1.execute("SELECT Env_ID, Build_ID, Build_Date, User_ID, User_Name, Build_URL, Status FROM Build_Info WHERE Build_ID = "+ jobid)
+        cur1.execute("SELECT Env_ID, Build_ID, Build_Date, User_ID, User_Name, Build_URL FROM Build_Info WHERE Build_ID = "+ jobid)
         result = cur1.fetchall()
             
     except:
+        
         print("Job ID "+ jobid + "not selected")
        
         
@@ -451,8 +276,6 @@ def display_db_build_data(jobs_info):
             myFile.write('</tr>')
                 
         myFile.write('</table>')
-#        myFile.write('</body>')
-#        myFile.write('</html>')              
 
 
 def get_db_task_data(jobid):
@@ -480,7 +303,6 @@ def get_db_task_data(jobid):
     return(task_result)
 
 
-
 def display_db_task_data(tasks_info):
     
     task_resultset = tasks_info
@@ -490,25 +312,9 @@ def display_db_task_data(tasks_info):
     
     with open(html_file_name, 'a') as myFile:
         
-#        myFile.write('<html>')
-#        myFile.write('<head>')
-#        myFile.write('<style>')
-#        myFile.write('table, th, td {border: 1px solid black;}')
-#        myFile.write('</style>')
-#        myFile.write('</head>')
-#        
-#        
-#        myFile.write('<body>')
-#        
         myFile.write('<h2> Jenkins Job\'s Tasks Information </h2>')
-#        myFile.write('<p> <b> Environment: </b>' + desc + '</p>')
-#        myFile.write('<p> <b> Build No.: </b>' + job_id + '</p>')
-#        myFile.write('<p> <b> UserId: </b>' + user_id + '</p>')
-#        myFile.write('<p> <b> User Name: </b>' + user_name + '</p>')
-        
-        
+
         myFile.write('<table style="width:100%">')
-        
         
         myFile.write('<tr>')
         myFile.write('<th colspan="2">Task</th>')
@@ -524,9 +330,6 @@ def display_db_task_data(tasks_info):
             if flag == 0:                
                 
                 myFile.write('<tr>')
-                
-#                myFile.write('<td>'+ str(row[0]) +'</td>')
-#                myFile.write('<td>'+ str(row[1]) +'</td>')
                 
                 if str(row[2]) == "Recycle":
                     myFile.write('<td rowspan="4">' + str(row[2]) + '</td>')
@@ -595,43 +398,21 @@ def display_db_task_data(tasks_info):
 
 
 
+#############Main
 
-#print(jobs_list)
+jobs_list = job_ids_list()
 
-#jobs_list = ['6470', '6469', '6468', '6467', '6466', '6465', '6464', '6463', '6462', '6461', '6460', '6459', '6458', '6457', '6456', '6455', '6454', '6453', '6452', '6451', '6450', '6449', '6448', '6447', '6446', '6445', '6444', '6443', '6442', '6441', '6440', '6439', '6438', '6437', '6436', '6435', '6434', '6433', '6432', '6431', '6430', '6429', '6428', '6427', '6426', '6425', '6424', '6423', '6422', '6421', '6420', '6419', '6418', '6417', '6416', '6415', '6414', '6413', '6412', '6411', '6410', '6409', '6408', '6407', '6406', '6405', '6404', '6403', '6402', '6401', '6400', '6399', '6398', '6397', '6396', '6395', '6394', '6393', '6392', '6391', '6390', '6389', '6388', '6387', '6386', '6385', '6384', '6383', '6382', '6381', '6380', '6379', '6378', '6377', '6376', '6375', '6374', '6373', '6372', '6371']
-
-jobs_list_sort = ['6571', '6572', '6573', '6574', '6575', '6576', '6577', '6578', '6579', '6580', '6581', '6582']
-
-#jobs_list = job_ids_list()
-
-#jobs_list_sort = sorted(jobs_list)
-
-#print(sorted(jobs_list))
-
-#print(jobs_list_sort)
-
+jobs_list_sort = sorted(jobs_list)
+        
 for ids in jobs_list_sort:
-#    get_url(ids)
     insert_db(ids)
-    #jobs_info = get_db_data(ids)
-#    
 
-#job_id = input("Enter the Job ID ")
+job_id = input("Enter the Job ID ")
 
-#job_info = get_db_build_data(job_id)
-#display_db_build_data(job_info)
+job_info = get_db_build_data(job_id)
+display_db_build_data(job_info)
 
-#tasks_info = get_db_task_data(job_id)
-#display_db_task_data(tasks_info)
-#print(tasks_info)
-
-#    for row in jobs_info:
-#        print(row[0], row[1], row[2], row[3], row[4], row[5])
+tasks_info = get_db_task_data(job_id)
+display_db_task_data(tasks_info)
 
 
-
-
-
-#get_url()
-#insert_db()
-#connect_DB()

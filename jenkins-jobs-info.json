@@ -22,561 +22,992 @@
     "builds": [
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6470,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6470/"
+            "number": 6582,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6582/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6469,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6469/"
+            "number": 6581,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6581/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6468,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6468/"
+            "number": 6580,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6580/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6467,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6467/"
+            "number": 6579,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6579/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6466,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6466/"
+            "number": 6578,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6578/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6465,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6465/"
+            "number": 6577,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6577/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6464,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6464/"
+            "number": 6576,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6576/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6463,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6463/"
+            "number": 6575,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6575/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6462,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6462/"
+            "number": 6574,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6574/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6461,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6461/"
+            "number": 6573,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6573/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6460,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6460/"
+            "number": 6572,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6572/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6459,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6459/"
+            "number": 6571,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6571/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6458,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6458/"
+            "number": 6570,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6570/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6457,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6457/"
+            "number": 6569,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6569/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6456,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6456/"
+            "number": 6568,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6568/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6455,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6455/"
+            "number": 6567,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6567/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6454,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6454/"
+            "number": 6566,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6566/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6453,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6453/"
+            "number": 6565,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6565/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6452,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6452/"
+            "number": 6564,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6564/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6451,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6451/"
+            "number": 6563,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6563/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6450,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6450/"
+            "number": 6562,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6562/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6449,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6449/"
+            "number": 6561,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6561/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6448,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6448/"
+            "number": 6560,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6560/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6447,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6447/"
+            "number": 6559,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6559/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6446,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6446/"
+            "number": 6558,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6558/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6445,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6445/"
+            "number": 6557,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6557/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6444,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6444/"
+            "number": 6556,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6556/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6443,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6443/"
+            "number": 6555,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6555/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6442,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6442/"
+            "number": 6554,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6554/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6441,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6441/"
+            "number": 6553,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6553/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6440,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6440/"
+            "number": 6552,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6552/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6439,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6439/"
+            "number": 6551,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6551/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6438,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6438/"
+            "number": 6550,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6550/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6437,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6437/"
+            "number": 6549,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6549/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6436,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6436/"
+            "number": 6548,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6548/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6435,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6435/"
+            "number": 6547,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6547/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6434,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6434/"
+            "number": 6546,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6546/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6433,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6433/"
+            "number": 6545,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6545/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6432,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6432/"
+            "number": 6544,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6544/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6431,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6431/"
+            "number": 6543,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6543/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6430,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6430/"
+            "number": 6542,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6542/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6429,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6429/"
+            "number": 6541,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6541/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6428,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6428/"
+            "number": 6540,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6540/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6427,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6427/"
+            "number": 6539,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6539/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6426,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6426/"
+            "number": 6538,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6538/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6425,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6425/"
+            "number": 6537,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6537/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6424,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6424/"
+            "number": 6536,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6536/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6423,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6423/"
+            "number": 6535,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6535/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6422,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6422/"
+            "number": 6534,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6534/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6421,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6421/"
+            "number": 6533,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6533/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6420,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6420/"
+            "number": 6532,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6532/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6419,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6419/"
+            "number": 6531,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6531/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6418,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6418/"
+            "number": 6530,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6530/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6417,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6417/"
+            "number": 6529,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6529/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6416,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6416/"
+            "number": 6528,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6528/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6415,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6415/"
+            "number": 6527,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6527/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6414,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6414/"
+            "number": 6526,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6526/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6413,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6413/"
+            "number": 6525,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6525/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6412,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6412/"
+            "number": 6524,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6524/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6411,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6411/"
+            "number": 6523,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6523/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6410,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6410/"
+            "number": 6522,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6522/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6409,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6409/"
+            "number": 6521,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6521/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6408,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6408/"
+            "number": 6520,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6520/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6407,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6407/"
+            "number": 6519,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6519/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6406,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6406/"
+            "number": 6518,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6518/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6405,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6405/"
+            "number": 6517,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6517/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6404,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6404/"
+            "number": 6516,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6516/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6403,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6403/"
+            "number": 6515,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6515/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6402,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6402/"
+            "number": 6514,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6514/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6401,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6401/"
+            "number": 6513,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6513/"
         },
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6400,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6400/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6399,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6399/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6398,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6398/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6397,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6397/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6396,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6396/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6395,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6395/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6394,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6394/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6393,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6393/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6392,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6392/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6391,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6391/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6390,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6390/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6389,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6389/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6388,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6388/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6387,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6387/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6386,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6386/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6385,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6385/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6384,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6384/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6383,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6383/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6382,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6382/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6381,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6381/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6380,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6380/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6379,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6379/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6378,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6378/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6377,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6377/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6376,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6376/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6375,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6375/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6374,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6374/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6373,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6373/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6372,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6372/"
-        },
-        {
-            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-            "number": 6371,
-            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6371/"
+            "number": 6512,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6512/"
         }
     ],
-    "color": "aborted_anime",
+    "color": "red",
     "concurrentBuild": true,
     "description": "",
     "displayName": "zeus_creative_recycles",
     "displayNameOrNull": null,
     "firstBuild": {
         "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-        "number": 6340,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6340/"
+        "number": 6512,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6512/"
     },
     "fullDisplayName": "zeus_creative_recycles",
     "fullName": "zeus_creative_recycles",
     "healthReport": [
         {
-            "description": "Build stability: No recent builds failed.",
-            "iconClassName": "icon-health-80plus",
-            "iconUrl": "health-80plus.png",
-            "score": 100
+            "description": "Build stability: 1 out of the last 5 builds failed.",
+            "iconClassName": "icon-health-60to79",
+            "iconUrl": "health-60to79.png",
+            "score": 80
         }
     ],
     "inQueue": false,
     "keepDependencies": false,
     "lastBuild": {
         "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-        "number": 6470,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6470/"
+        "number": 6582,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6582/"
     },
     "lastCompletedBuild": {
         "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-        "number": 6469,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6469/"
+        "number": 6582,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6582/"
     },
     "lastFailedBuild": {
         "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-        "number": 6463,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6463/"
+        "number": 6582,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6582/"
     },
     "lastStableBuild": {
         "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-        "number": 6467,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6467/"
+        "number": 6581,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6581/"
     },
     "lastSuccessfulBuild": {
         "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-        "number": 6467,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6467/"
+        "number": 6581,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6581/"
     },
     "lastUnstableBuild": null,
     "lastUnsuccessfulBuild": {
         "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-        "number": 6469,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6469/"
+        "number": 6582,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6582/"
     },
     "name": "zeus_creative_recycles",
-    "nextBuildNumber": 6471,
+    "nextBuildNumber": 6583,
     "property": [
+        {
+            "_class": "hudson.model.ParametersDefinitionProperty",
+            "parameterDefinitions": [
+                {
+                    "_class": "hudson.model.StringParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.StringParameterValue",
+                        "name": "ENVIRONMENT",
+                        "value": "mcre-xx (or) bcre-xx"
+                    },
+                    "description": "Based on requirement change the environment name ",
+                    "name": "ENVIRONMENT",
+                    "type": "StringParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.StringParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.StringParameterValue",
+                        "name": "BRAND",
+                        "value": "MCOM"
+                    },
+                    "description": "If it is BCOM , change this to BCOM",
+                    "name": "BRAND",
+                    "type": "StringParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.StringParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.StringParameterValue",
+                        "name": "UPDATE_CUSTOM_DATE",
+                        "value": "NO_UPDATE"
+                    },
+                    "description": "2018-06-12 - Follow this format ",
+                    "name": "UPDATE_CUSTOM_DATE",
+                    "type": "StringParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.StringParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.StringParameterValue",
+                        "name": "BLUE_PRINT",
+                        "value": "mcom_site_creative"
+                    },
+                    "description": "If it is BCOM , change this to \"  bcom_site_creative \"",
+                    "name": "BLUE_PRINT",
+                    "type": "StringParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RUN_DATA_LOAD",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RUN_DATA_LOAD",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_APOLLO",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_APOLLO",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_FCC",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_FCC",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_DISCOVERY",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_DISCOVERY",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RUN_CATALOG_REVIEW_AND_SCP_RDPP_PUBLISH_LOAD",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RUN_CATALOG_REVIEW_AND_SCP_RDPP_PUBLISH_LOAD",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_CONTENT",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_CONTENT",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RUN_APPOLO_INDEXING_AND_CONTENT_PRELOAD",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RUN_APPOLO_INDEXING_AND_CONTENT_PRELOAD",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_CUSTOMER",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_CUSTOMER",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_ORDER",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_ORDER",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_PROMOTION",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_PROMOTION",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_WSSG",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_WSSG",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_NAVAPP",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_NAVAPP",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "LOAD_AND_HOLD_PREVIEW",
+                        "value": false
+                    },
+                    "description": "",
+                    "name": "LOAD_AND_HOLD_PREVIEW",
+                    "type": "BooleanParameterDefinition"
+                }
+            ]
+        },
+        {
+            "_class": "hudson.model.ParametersDefinitionProperty",
+            "parameterDefinitions": [
+                {
+                    "_class": "hudson.model.StringParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.StringParameterValue",
+                        "name": "ENVIRONMENT",
+                        "value": "mcre-xx (or) bcre-xx"
+                    },
+                    "description": "Based on requirement change the environment name ",
+                    "name": "ENVIRONMENT",
+                    "type": "StringParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.StringParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.StringParameterValue",
+                        "name": "BRAND",
+                        "value": "MCOM"
+                    },
+                    "description": "If it is BCOM , change this to BCOM",
+                    "name": "BRAND",
+                    "type": "StringParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.StringParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.StringParameterValue",
+                        "name": "UPDATE_CUSTOM_DATE",
+                        "value": "NO_UPDATE"
+                    },
+                    "description": "2018-06-12 - Follow this format ",
+                    "name": "UPDATE_CUSTOM_DATE",
+                    "type": "StringParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.StringParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.StringParameterValue",
+                        "name": "BLUE_PRINT",
+                        "value": "mcom_site_creative"
+                    },
+                    "description": "If it is BCOM , change this to \"  bcom_site_creative \"",
+                    "name": "BLUE_PRINT",
+                    "type": "StringParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RUN_DATA_LOAD",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RUN_DATA_LOAD",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_APOLLO",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_APOLLO",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_FCC",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_FCC",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_DISCOVERY",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_DISCOVERY",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RUN_CATALOG_REVIEW_AND_SCP_RDPP_PUBLISH_LOAD",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RUN_CATALOG_REVIEW_AND_SCP_RDPP_PUBLISH_LOAD",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_CONTENT",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_CONTENT",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RUN_APPOLO_INDEXING_AND_CONTENT_PRELOAD",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RUN_APPOLO_INDEXING_AND_CONTENT_PRELOAD",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_CUSTOMER",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_CUSTOMER",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_ORDER",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_ORDER",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_PROMOTION",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_PROMOTION",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_WSSG",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_WSSG",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_NAVAPP",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_NAVAPP",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "LOAD_AND_HOLD_PREVIEW",
+                        "value": false
+                    },
+                    "description": "",
+                    "name": "LOAD_AND_HOLD_PREVIEW",
+                    "type": "BooleanParameterDefinition"
+                }
+            ]
+        },
+        {
+            "_class": "hudson.model.ParametersDefinitionProperty",
+            "parameterDefinitions": [
+                {
+                    "_class": "hudson.model.StringParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.StringParameterValue",
+                        "name": "ENVIRONMENT",
+                        "value": "mcre-xx (or) bcre-xx"
+                    },
+                    "description": "Based on requirement change the environment name ",
+                    "name": "ENVIRONMENT",
+                    "type": "StringParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.StringParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.StringParameterValue",
+                        "name": "BRAND",
+                        "value": "MCOM"
+                    },
+                    "description": "If it is BCOM , change this to BCOM",
+                    "name": "BRAND",
+                    "type": "StringParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.StringParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.StringParameterValue",
+                        "name": "UPDATE_CUSTOM_DATE",
+                        "value": "NO_UPDATE"
+                    },
+                    "description": "2018-06-12 - Follow this format ",
+                    "name": "UPDATE_CUSTOM_DATE",
+                    "type": "StringParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.StringParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.StringParameterValue",
+                        "name": "BLUE_PRINT",
+                        "value": "mcom_site_creative"
+                    },
+                    "description": "If it is BCOM , change this to \"  bcom_site_creative \"",
+                    "name": "BLUE_PRINT",
+                    "type": "StringParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RUN_DATA_LOAD",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RUN_DATA_LOAD",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_APOLLO",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_APOLLO",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_FCC",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_FCC",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_DISCOVERY",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_DISCOVERY",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RUN_CATALOG_REVIEW_AND_SCP_RDPP_PUBLISH_LOAD",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RUN_CATALOG_REVIEW_AND_SCP_RDPP_PUBLISH_LOAD",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_CONTENT",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_CONTENT",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RUN_APPOLO_INDEXING_AND_CONTENT_PRELOAD",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RUN_APPOLO_INDEXING_AND_CONTENT_PRELOAD",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_CUSTOMER",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_CUSTOMER",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_ORDER",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_ORDER",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_PROMOTION",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_PROMOTION",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_WSSG",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_WSSG",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "RECYCLE_NAVAPP",
+                        "value": true
+                    },
+                    "description": "",
+                    "name": "RECYCLE_NAVAPP",
+                    "type": "BooleanParameterDefinition"
+                },
+                {
+                    "_class": "hudson.model.BooleanParameterDefinition",
+                    "defaultParameterValue": {
+                        "_class": "hudson.model.BooleanParameterValue",
+                        "name": "LOAD_AND_HOLD_PREVIEW",
+                        "value": false
+                    },
+                    "description": "",
+                    "name": "LOAD_AND_HOLD_PREVIEW",
+                    "type": "BooleanParameterDefinition"
+                }
+            ]
+        },
         {
             "_class": "hudson.model.ParametersDefinitionProperty",
             "parameterDefinitions": [

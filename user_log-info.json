@@ -7,22 +7,22 @@
                 {
                     "_class": "hudson.model.StringParameterValue",
                     "name": "ENVIRONMENT",
-                    "value": "mpre-slp"
+                    "value": "bcre-36"
                 },
                 {
                     "_class": "hudson.model.StringParameterValue",
                     "name": "BRAND",
-                    "value": "MCOM"
+                    "value": "BCOM"
                 },
                 {
                     "_class": "hudson.model.StringParameterValue",
                     "name": "UPDATE_CUSTOM_DATE",
-                    "value": "2018-08-03"
+                    "value": "NO_UPDATE"
                 },
                 {
                     "_class": "hudson.model.StringParameterValue",
                     "name": "BLUE_PRINT",
-                    "value": "mcom_site_creative"
+                    "value": "bcom_site_creative"
                 },
                 {
                     "_class": "hudson.model.BooleanParameterValue",
@@ -96,9 +96,9 @@
             "causes": [
                 {
                     "_class": "hudson.model.Cause$UserIdCause",
-                    "shortDescription": "Started by user da-MCOM-wdsdevops",
-                    "userId": "da-mcom-wdsdevops",
-                    "userName": "da-MCOM-wdsdevops"
+                    "shortDescription": "Started by user Shabnam Bhanu",
+                    "userId": "bh04962",
+                    "userName": "Shabnam Bhanu"
                 }
             ]
         },
@@ -112,7 +112,7 @@
             "buildsByBranchName": {
                 "refs/remotes/origin/master": {
                     "_class": "hudson.plugins.git.util.Build",
-                    "buildNumber": 6371,
+                    "buildNumber": 6582,
                     "buildResult": null,
                     "marked": {
                         "SHA1": "f3a1d268706c7d7bbfcb5b23e4ccb2121606033c",
@@ -157,7 +157,7 @@
             "buildsByBranchName": {
                 "refs/remotes/origin/master": {
                     "_class": "hudson.plugins.git.util.Build",
-                    "buildNumber": 6371,
+                    "buildNumber": 6582,
                     "buildResult": null,
                     "marked": {
                         "SHA1": "952ead2685be6a97b333a1decab5f4ef3f6a8c99",
@@ -199,7 +199,6 @@
         {},
         {},
         {},
-        {},
         {
             "_class": "org.jenkinsci.plugins.workflow.job.views.FlowGraphAction"
         },
@@ -210,25 +209,25 @@
     "building": false,
     "changeSets": [],
     "culprits": [],
-    "description": "mpre-slp",
-    "displayName": "#6371",
-    "duration": 18107510,
-    "estimatedDuration": 12482614,
+    "description": "bcre-36",
+    "displayName": "#6582",
+    "duration": 7714668,
+    "estimatedDuration": 13111803,
     "executor": null,
-    "fullDisplayName": "zeus_creative_recycles #6371",
-    "id": "6371",
+    "fullDisplayName": "zeus_creative_recycles #6582",
+    "id": "6582",
     "keepLog": false,
     "nextBuild": {
-        "number": 6372,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6372/"
+        "number": 6583,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6583/"
     },
-    "number": 6371,
+    "number": 6582,
     "previousBuild": {
-        "number": 6370,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6370/"
+        "number": 6581,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6581/"
     },
-    "queueId": 10555,
-    "result": "SUCCESS",
-    "timestamp": 1530585030620,
-    "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6371/"
+    "queueId": 13347,
+    "result": "FAILURE",
+    "timestamp": 1531109125513,
+    "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6582/"
 }
