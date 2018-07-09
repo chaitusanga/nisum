@@ -74,6 +74,8 @@ def convertMillis(millis):
     hours = (millis / (1000*60*60)) % 24
     hours = int(hours)
 
+    return(hours, minutes, seconds)
+
 
 def get_url(job_id):
     
@@ -168,7 +170,7 @@ def insert_db(job_ids):
         startTime = dic['startTimeMillis'] / 1000.0
         start_timeStamp = datetime.datetime.fromtimestamp(startTime).strftime('%Y-%m-%d %H:%M:%S')
         start_time_convert = convert_datetime_timezone(start_timeStamp, "Asia/Kolkata", "PST8PDT")
-        start_time_convert = start_time_convert + "PST"
+        #start_time_convert = start_time_convert + "PST"
         
         con_hour, con_min, con_sec = convertMillis(dic['durationMillis'])
         durTime = str(con_hour) + "Hrs " + str(con_min) + "Min " + str(con_sec) + "Sec"
@@ -220,7 +222,7 @@ def get_db_build_data(jobid):
 
     try:
     
-        cur1.execute("SELECT Env_ID, Build_ID, Build_Date, User_ID, User_Name, Build_URL FROM Build_Info WHERE Build_ID = "+ jobid)
+        cur1.execute("SELECT Env_ID, Build_ID, Build_Date, User_ID, User_Name, Build_URL, Status FROM Build_Info WHERE Build_ID = "+ jobid)
         result = cur1.fetchall()
             
     except:
@@ -262,6 +264,7 @@ def display_db_build_data(jobs_info):
         myFile.write('<th>User ID</th>')
         myFile.write('<th>User Name</th>')
         myFile.write('<th>URL</th>')
+        myFile.write('<th>Status</th>')
         myFile.write('</tr>')
         
         for row in resultset:
@@ -273,6 +276,7 @@ def display_db_build_data(jobs_info):
             myFile.write('<td>'+ str(row[3]) +'</td>') 
             myFile.write('<td>'+ str(row[4]) +'</td>') 
             myFile.write('<td>'+ str(row[5]) +'</td>') 
+            myFile.write('<td>'+ str(row[6]) +'</td>') 
             myFile.write('</tr>')
                 
         myFile.write('</table>')
@@ -357,6 +361,10 @@ def display_db_task_data(tasks_info):
                     myFile.write('<td style="background-color:Cyan;">' + str(row[6]) + '</td>')
                     myFile.write('</tr>')
                     flag = 0
+                elif job_status == "IN_PROGRESS":
+                    myFile.write('<td style="background-color:Yellow;">' + str(row[6]) + '</td>')
+                    myFile.write('</tr>')
+                    flag = 0
                 elif job_status == "FAILED":
                     myFile.write('<td style="background-color:Red;">' + str(row[6]) + '</td>')
                     myFile.write('</tr>')
@@ -404,8 +412,8 @@ jobs_list = job_ids_list()
 
 jobs_list_sort = sorted(jobs_list)
         
-for ids in jobs_list_sort:
-    insert_db(ids)
+#for ids in jobs_list_sort:
+#    insert_db(ids)
 
 job_id = input("Enter the Job ID ")
 

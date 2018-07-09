@@ -7,7 +7,7 @@
                 {
                     "_class": "hudson.model.StringParameterValue",
                     "name": "ENVIRONMENT",
-                    "value": "bcre-36"
+                    "value": "bcre-37"
                 },
                 {
                     "_class": "hudson.model.StringParameterValue",
@@ -27,37 +27,37 @@
                 {
                     "_class": "hudson.model.BooleanParameterValue",
                     "name": "RUN_DATA_LOAD",
-                    "value": true
+                    "value": false
                 },
                 {
                     "_class": "hudson.model.BooleanParameterValue",
                     "name": "RECYCLE_APOLLO",
-                    "value": true
+                    "value": false
                 },
                 {
                     "_class": "hudson.model.BooleanParameterValue",
                     "name": "RECYCLE_FCC",
-                    "value": true
+                    "value": false
                 },
                 {
                     "_class": "hudson.model.BooleanParameterValue",
                     "name": "RECYCLE_DISCOVERY",
-                    "value": true
+                    "value": false
                 },
                 {
                     "_class": "hudson.model.BooleanParameterValue",
                     "name": "RUN_CATALOG_REVIEW_AND_SCP_RDPP_PUBLISH_LOAD",
-                    "value": true
+                    "value": false
                 },
                 {
                     "_class": "hudson.model.BooleanParameterValue",
                     "name": "RECYCLE_CONTENT",
-                    "value": true
+                    "value": false
                 },
                 {
                     "_class": "hudson.model.BooleanParameterValue",
                     "name": "RUN_APPOLO_INDEXING_AND_CONTENT_PRELOAD",
-                    "value": true
+                    "value": false
                 },
                 {
                     "_class": "hudson.model.BooleanParameterValue",
@@ -112,7 +112,7 @@
             "buildsByBranchName": {
                 "refs/remotes/origin/master": {
                     "_class": "hudson.plugins.git.util.Build",
-                    "buildNumber": 6582,
+                    "buildNumber": 6584,
                     "buildResult": null,
                     "marked": {
                         "SHA1": "f3a1d268706c7d7bbfcb5b23e4ccb2121606033c",
@@ -157,7 +157,7 @@
             "buildsByBranchName": {
                 "refs/remotes/origin/master": {
                     "_class": "hudson.plugins.git.util.Build",
-                    "buildNumber": 6582,
+                    "buildNumber": 6584,
                     "buildResult": null,
                     "marked": {
                         "SHA1": "952ead2685be6a97b333a1decab5f4ef3f6a8c99",
@@ -209,25 +209,22 @@
     "building": false,
     "changeSets": [],
     "culprits": [],
-    "description": "bcre-36",
-    "displayName": "#6582",
-    "duration": 7714668,
+    "description": "bcre-37",
+    "displayName": "#6584",
+    "duration": 580810,
     "estimatedDuration": 13111803,
     "executor": null,
-    "fullDisplayName": "zeus_creative_recycles #6582",
-    "id": "6582",
+    "fullDisplayName": "zeus_creative_recycles #6584",
+    "id": "6584",
     "keepLog": false,
-    "nextBuild": {
+    "nextBuild": null,
+    "number": 6584,
+    "previousBuild": {
         "number": 6583,
         "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6583/"
     },
-    "number": 6582,
-    "previousBuild": {
-        "number": 6581,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6581/"
-    },
-    "queueId": 13347,
+    "queueId": 13505,
     "result": "FAILURE",
-    "timestamp": 1531109125513,
-    "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6582/"
+    "timestamp": 1531117675000,
+    "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6584/"
 }

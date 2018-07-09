@@ -1,307 +1,287 @@
 {
     "_links": {
         "self": {
-            "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/wfapi/describe"
+            "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/wfapi/describe"
         }
     },
-    "durationMillis": 7714668,
-    "endTimeMillis": 1531116840195,
-    "id": "6582",
-    "name": "#6582",
+    "durationMillis": 580810,
+    "endTimeMillis": 1531118255815,
+    "id": "6584",
+    "name": "#6584",
     "pauseDurationMillis": 0,
-    "queueDurationMillis": 14,
+    "queueDurationMillis": 5,
     "stages": [
         {
             "_links": {
                 "self": {
-                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/execution/node/6/wfapi/describe"
+                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/execution/node/6/wfapi/describe"
                 }
             },
-            "durationMillis": 29393,
+            "durationMillis": 24627,
             "execNode": "",
             "id": "6",
             "name": "prepare",
             "pauseDurationMillis": 0,
-            "startTimeMillis": 1531109329639,
+            "startTimeMillis": 1531117675432,
             "status": "SUCCESS"
         },
         {
             "_links": {
                 "self": {
-                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/execution/node/25/wfapi/describe"
+                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/execution/node/25/wfapi/describe"
                 }
             },
-            "durationMillis": 621,
+            "durationMillis": 2881,
             "execNode": "",
             "id": "25",
             "name": "Updated Environemnt ID",
             "pauseDurationMillis": 0,
-            "startTimeMillis": 1531109359042,
+            "startTimeMillis": 1531117700068,
             "status": "SUCCESS"
         },
         {
             "_links": {
                 "self": {
-                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/execution/node/34/wfapi/describe"
+                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/execution/node/34/wfapi/describe"
                 }
             },
-            "durationMillis": 67,
+            "durationMillis": 36,
             "execNode": "",
             "id": "34",
             "name": "Update Custom Date",
             "pauseDurationMillis": 0,
-            "startTimeMillis": 1531109359672,
+            "startTimeMillis": 1531117702957,
             "status": "NOT_EXECUTED"
         },
         {
             "_links": {
                 "self": {
-                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/execution/node/38/wfapi/describe"
+                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/execution/node/38/wfapi/describe"
                 }
             },
-            "durationMillis": 1031684,
+            "durationMillis": 23,
             "execNode": "",
             "id": "38",
             "name": "SiteDB data_load",
             "pauseDurationMillis": 0,
-            "startTimeMillis": 1531109359749,
-            "status": "SUCCESS"
+            "startTimeMillis": 1531117703001,
+            "status": "NOT_EXECUTED"
         },
         {
             "_links": {
                 "self": {
-                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/execution/node/51/wfapi/describe"
+                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/execution/node/42/wfapi/describe"
                 }
             },
-            "durationMillis": 127653,
+            "durationMillis": 25,
             "execNode": "",
-            "id": "51",
+            "id": "42",
             "name": "Recycle Apollo",
             "pauseDurationMillis": 0,
-            "startTimeMillis": 1531110391442,
-            "status": "SUCCESS"
+            "startTimeMillis": 1531117703033,
+            "status": "NOT_EXECUTED"
         },
         {
             "_links": {
                 "self": {
-                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/execution/node/64/wfapi/describe"
+                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/execution/node/46/wfapi/describe"
                 }
             },
-            "durationMillis": 6320473,
-            "error": {
-                "message": "script returned exit code 1",
-                "type": "hudson.AbortException"
-            },
+            "durationMillis": 24,
             "execNode": "",
-            "id": "64",
+            "id": "46",
             "name": "Recycle FCC",
             "pauseDurationMillis": 0,
-            "startTimeMillis": 1531110519105,
-            "status": "FAILED"
+            "startTimeMillis": 1531117703066,
+            "status": "NOT_EXECUTED"
         },
         {
             "_links": {
                 "self": {
-                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/execution/node/77/wfapi/describe"
+                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/execution/node/50/wfapi/describe"
                 }
             },
-            "durationMillis": 22,
-            "error": {
-                "message": "script returned exit code 1",
-                "type": "hudson.AbortException"
-            },
+            "durationMillis": 24,
             "execNode": "",
-            "id": "77",
+            "id": "50",
             "name": "Recycle Discovery",
             "pauseDurationMillis": 0,
-            "startTimeMillis": 1531116839588,
-            "status": "FAILED"
+            "startTimeMillis": 1531117703098,
+            "status": "NOT_EXECUTED"
         },
         {
             "_links": {
                 "self": {
-                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/execution/node/81/wfapi/describe"
+                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/execution/node/54/wfapi/describe"
                 }
             },
-            "durationMillis": 22,
-            "error": {
-                "message": "script returned exit code 1",
-                "type": "hudson.AbortException"
-            },
+            "durationMillis": 24,
             "execNode": "",
-            "id": "81",
+            "id": "54",
             "name": "SCP and RDPP artifact check  and download",
             "pauseDurationMillis": 0,
-            "startTimeMillis": 1531116839619,
-            "status": "FAILED"
+            "startTimeMillis": 1531117703130,
+            "status": "NOT_EXECUTED"
         },
         {
             "_links": {
                 "self": {
-                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/execution/node/85/wfapi/describe"
+                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/execution/node/58/wfapi/describe"
                 }
             },
-            "durationMillis": 23,
-            "error": {
-                "message": "script returned exit code 1",
-                "type": "hudson.AbortException"
-            },
+            "durationMillis": 25,
             "execNode": "",
-            "id": "85",
+            "id": "58",
             "name": "Run SCP and RDPP and Catalog Review load",
             "pauseDurationMillis": 0,
-            "startTimeMillis": 1531116839651,
-            "status": "FAILED"
+            "startTimeMillis": 1531117703163,
+            "status": "NOT_EXECUTED"
         },
         {
             "_links": {
                 "self": {
-                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/execution/node/89/wfapi/describe"
+                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/execution/node/62/wfapi/describe"
+                }
+            },
+            "durationMillis": 24,
+            "execNode": "",
+            "id": "62",
+            "name": "Recycle Content",
+            "pauseDurationMillis": 0,
+            "startTimeMillis": 1531117703197,
+            "status": "NOT_EXECUTED"
+        },
+        {
+            "_links": {
+                "self": {
+                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/execution/node/66/wfapi/describe"
                 }
             },
             "durationMillis": 23,
-            "error": {
-                "message": "script returned exit code 1",
-                "type": "hudson.AbortException"
-            },
             "execNode": "",
-            "id": "89",
-            "name": "Recycle Content",
-            "pauseDurationMillis": 0,
-            "startTimeMillis": 1531116839684,
-            "status": "FAILED"
-        },
-        {
-            "_links": {
-                "self": {
-                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/execution/node/93/wfapi/describe"
-                }
-            },
-            "durationMillis": 22,
-            "error": {
-                "message": "script returned exit code 1",
-                "type": "hudson.AbortException"
-            },
-            "execNode": "",
-            "id": "93",
+            "id": "66",
             "name": "Run Apollo Indexing, Content preload and SCP Exchange rate",
             "pauseDurationMillis": 0,
-            "startTimeMillis": 1531116839718,
-            "status": "FAILED"
+            "startTimeMillis": 1531117703230,
+            "status": "NOT_EXECUTED"
         },
         {
             "_links": {
                 "self": {
-                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/execution/node/97/wfapi/describe"
+                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/execution/node/70/wfapi/describe"
                 }
             },
-            "durationMillis": 34,
+            "durationMillis": 81,
             "execNode": "",
-            "id": "97",
+            "id": "70",
             "name": "Recycle",
             "pauseDurationMillis": 0,
-            "startTimeMillis": 1531116839751,
+            "startTimeMillis": 1531117703261,
             "status": "SUCCESS"
         },
         {
             "_links": {
                 "self": {
-                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/execution/node/105/wfapi/describe"
+                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/execution/node/78/wfapi/describe"
                 }
             },
-            "durationMillis": 33,
+            "durationMillis": 183812,
             "execNode": "",
-            "id": "105",
+            "id": "78",
             "name": "Recycle Customer",
             "pauseDurationMillis": 0,
-            "startTimeMillis": 1531116839785,
+            "startTimeMillis": 1531117703342,
             "status": "SUCCESS"
         },
         {
             "_links": {
                 "self": {
-                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/execution/node/107/wfapi/describe"
+                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/execution/node/80/wfapi/describe"
                 }
             },
-            "durationMillis": 39,
+            "durationMillis": 187525,
             "execNode": "",
-            "id": "107",
+            "id": "80",
             "name": "Recycle Order",
             "pauseDurationMillis": 0,
-            "startTimeMillis": 1531116839788,
+            "startTimeMillis": 1531117703345,
             "status": "SUCCESS"
         },
         {
             "_links": {
                 "self": {
-                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/execution/node/109/wfapi/describe"
+                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/execution/node/82/wfapi/describe"
                 }
             },
-            "durationMillis": 44,
+            "durationMillis": 112475,
             "execNode": "",
-            "id": "109",
+            "id": "82",
             "name": "Recycle Promotion",
             "pauseDurationMillis": 0,
-            "startTimeMillis": 1531116839791,
+            "startTimeMillis": 1531117703348,
             "status": "SUCCESS"
         },
         {
             "_links": {
                 "self": {
-                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/execution/node/123/wfapi/describe"
-                }
-            },
-            "durationMillis": 29,
-            "execNode": "",
-            "id": "123",
-            "name": "Recycle web",
-            "pauseDurationMillis": 0,
-            "startTimeMillis": 1531116839909,
-            "status": "SUCCESS"
-        },
-        {
-            "_links": {
-                "self": {
-                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/execution/node/129/wfapi/describe"
+                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/execution/node/123/wfapi/describe"
                 }
             },
             "durationMillis": 30,
             "execNode": "",
-            "id": "129",
-            "name": "Recycle WSSG",
+            "id": "123",
+            "name": "Recycle web",
             "pauseDurationMillis": 0,
-            "startTimeMillis": 1531116839938,
+            "startTimeMillis": 1531117890923,
             "status": "SUCCESS"
         },
         {
             "_links": {
                 "self": {
-                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/execution/node/131/wfapi/describe"
+                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/execution/node/129/wfapi/describe"
                 }
             },
-            "durationMillis": 36,
+            "durationMillis": 364617,
+            "execNode": "",
+            "id": "129",
+            "name": "Recycle WSSG",
+            "pauseDurationMillis": 0,
+            "startTimeMillis": 1531117890953,
+            "status": "SUCCESS"
+        },
+        {
+            "_links": {
+                "self": {
+                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/execution/node/131/wfapi/describe"
+                }
+            },
+            "durationMillis": 71480,
+            "error": {
+                "message": "script returned exit code 1",
+                "type": "hudson.AbortException"
+            },
             "execNode": "",
             "id": "131",
             "name": "Recycle NavApp",
             "pauseDurationMillis": 0,
-            "startTimeMillis": 1531116839941,
-            "status": "SUCCESS"
+            "startTimeMillis": 1531117890956,
+            "status": "FAILED"
         },
         {
             "_links": {
                 "self": {
-                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6582/execution/node/142/wfapi/describe"
+                    "href": "/jenkins/view/zeus_recycle/job/zeus_creative_recycles/6584/execution/node/160/wfapi/describe"
                 }
             },
-            "durationMillis": 122,
+            "durationMillis": 123,
             "execNode": "",
-            "id": "142",
+            "id": "160",
             "name": "Declarative: Post Actions",
             "pauseDurationMillis": 0,
-            "startTimeMillis": 1531116840035,
+            "startTimeMillis": 1531118255651,
             "status": "SUCCESS"
         }
     ],
-    "startTimeMillis": 1531109125527,
+    "startTimeMillis": 1531117675005,
     "status": "FAILED"
 }

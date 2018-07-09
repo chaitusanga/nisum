@@ -212,7 +212,8 @@ def insert_db(job_ids):
     database='jenkins_jobs')
 
     job_time = float(job_timestamp) / 1000.0            
-    job_time_date = datetime.datetime.fromtimestamp(job_time).strftime('%Y-%m-%d') 
+    job_time_date = datetime.datetime.fromtimestamp(job_time).strftime('%Y-%m-%d')
+    #job_time_date_convert = convert_datetime_timezone(job_time_date, "Asia/Kolkata", "PST8PDT")
 
     cur = conn.cursor()
     cur.execute("SELECT COUNT(Build_ID) FROM Build_Info WHERE Build_ID = "+ job_id)
@@ -240,87 +241,87 @@ def insert_db(job_ids):
         cur1.close()
 
     
-#    for dic in allItems:
-#        
-#        startTime = dic['startTimeMillis'] / 1000.0
-#        start_timeStamp = datetime.datetime.fromtimestamp(startTime).strftime('%Y-%m-%d %H:%M:%S')
-#        start_time_convert = convert_datetime_timezone(start_timeStamp, "Asia/Kolkata", "PST8PDT")
-#        start_time_convert = start_time_convert + "PST"
-#        
-#        con_hour, con_min, con_sec = convertMillis(dic['durationMillis'])
-#        durTime = str(con_hour) + "Hrs " + str(con_min) + "Min " + str(con_sec) + "Sec"
-#
-#
-#        endTime = (dic['startTimeMillis'] + dic['durationMillis']) / 1000.0            
-#        end_timeStamp = datetime.datetime.fromtimestamp(endTime).strftime('%Y-%m-%d %H:%M:%S')            
-#        end_time_convert = convert_datetime_timezone(end_timeStamp, "Asia/Kolkata", "PST8PDT")
-#        end_time_convert = end_time_convert + "PST"
-#        
-#        
-#        #print(dic)
-#
-#
-#
-#        
-#
-#        #print(job_time_date)
-# 
-#        ########validate job in the db before insert ######
-#        
-#        conn = mysql.connector.connect(
-#        user='jenkins',
-#        password='nisum@123',
-#        host='localhost',
-#        database='jenkins_jobs')
-#
-#        
-#
-#                
-#                ##### Insert into Tasks table  
-#                
-#        job_status = str(dic['status'])
-#        
-#        #print(desc, job_id, dic['name'], start_time_convert, durTime, end_time_convert, job_status)
-#
-#        
-#        cur2 = conn.cursor()
-#
-#        try:
-#    
-#            query = """INSERT INTO Tasks (Env_ID, Build_ID, Task_Name, Start_Time, Duration, End_Time, Status) VALUES (\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\");""" % (desc, job_id, dic['name'], start_time_convert, durTime, end_time_convert, job_status)
-#            cur2.execute(query)
-#            conn.commit()
-#            print("Successfully inserted Build ID into Tasks---> " + job_id + dic['name'])
-#            
-#        except:
-#            
-#            print("Job not inserted in Tasks ----> " + job_id + dic['name'])
-#            conn.rollback()
-#
-#        cur2.close()  
-#
-#        conn.close()
+    for dic in allItems:
+        
+        startTime = dic['startTimeMillis'] / 1000.0
+        start_timeStamp = datetime.datetime.fromtimestamp(startTime).strftime('%Y-%m-%d %H:%M:%S')
+        start_time_convert = convert_datetime_timezone(start_timeStamp, "Asia/Kolkata", "PST8PDT")
+        start_time_convert = start_time_convert + "PST"
+        
+        con_hour, con_min, con_sec = convertMillis(dic['durationMillis'])
+        durTime = str(con_hour) + "Hrs " + str(con_min) + "Min " + str(con_sec) + "Sec"
 
-#        ##### Insert into Build_Info table
-#        
-#        conn = mysql.connector.connect(
-#        user='jenkins',
-#        password='nisum@123',
-#        host='localhost',
-#        database='jenkins_jobs')
+
+        endTime = (dic['startTimeMillis'] + dic['durationMillis']) / 1000.0            
+        end_timeStamp = datetime.datetime.fromtimestamp(endTime).strftime('%Y-%m-%d %H:%M:%S')            
+        end_time_convert = convert_datetime_timezone(end_timeStamp, "Asia/Kolkata", "PST8PDT")
+        end_time_convert = end_time_convert + "PST"
+        
+        
+        #print(dic)
+
+
 
         
-#        cur = conn.cursor()
-#        query = """INSERT INTO Build_Info (Env_ID, Build_ID, Build_Date, User_ID, User_Name, Build_URL) VALUES (\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\");""" % (desc, job_id, job_time_date, user_id, user_name, build_url)
-#        #print(query)
-#        try:
-#            cur.execute(query)
-#            conn.commit()
-#        except:
-#            conn.rollback()
-#        
-#        cur.close()
-#        conn.close()
+
+        #print(job_time_date)
+ 
+        ########validate job in the db before insert ######
+        
+        conn = mysql.connector.connect(
+        user='jenkins',
+        password='nisum@123',
+        host='localhost',
+        database='jenkins_jobs')
+
+        
+
+                
+                ##### Insert into Tasks table  
+                
+        job_status = str(dic['status'])
+        
+        #print(desc, job_id, dic['name'], start_time_convert, durTime, end_time_convert, job_status)
+
+        
+        cur2 = conn.cursor()
+
+        try:
+    
+            query = """INSERT INTO Tasks (Env_ID, Build_ID, Task_Name, Start_Time, Duration, End_Time, Status) VALUES (\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\");""" % (desc, job_id, dic['name'], start_time_convert, durTime, end_time_convert, job_status)
+            cur2.execute(query)
+            conn.commit()
+            print("Successfully inserted Build ID into Tasks---> " + job_id + dic['name'])
+            
+        except:
+            
+            print("Job not inserted in Tasks ----> " + job_id + dic['name'])
+            conn.rollback()
+
+        cur2.close()  
+
+        conn.close()
+
+        ##### Insert into Build_Info table
+        
+        conn = mysql.connector.connect(
+        user='jenkins',
+        password='nisum@123',
+        host='localhost',
+        database='jenkins_jobs')
+
+        
+        cur = conn.cursor()
+        query = """INSERT INTO Build_Info (Env_ID, Build_ID, Build_Date, User_ID, User_Name, Build_URL) VALUES (\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\");""" % (desc, job_id, job_time_date, user_id, user_name, build_url)
+        #print(query)
+        try:
+            cur.execute(query)
+            conn.commit()
+        except:
+            conn.rollback()
+        
+        cur.close()
+        conn.close()
         
         
         
@@ -437,6 +438,7 @@ def display_db_build_data(jobs_info):
         myFile.write('<th>User ID</th>')
         myFile.write('<th>User Name</th>')
         myFile.write('<th>URL</th>')
+        myFile.write('<th>Status</th>')
         myFile.write('</tr>')
         
         for row in resultset:
@@ -448,6 +450,7 @@ def display_db_build_data(jobs_info):
             myFile.write('<td>'+ str(row[3]) +'</td>') 
             myFile.write('<td>'+ str(row[4]) +'</td>') 
             myFile.write('<td>'+ str(row[5]) +'</td>') 
+            myFile.write('<td>'+ str(row[6]) +'</td>') 
             myFile.write('</tr>')
                 
         myFile.write('</table>')
@@ -554,6 +557,10 @@ def display_db_task_data(tasks_info):
                     myFile.write('<td style="background-color:Cyan;">' + str(row[6]) + '</td>')
                     myFile.write('</tr>')
                     flag = 0
+                elif job_status == "IN_PROGRESS":
+                    myFile.write('<td style="background-color:Yellow;">' + str(row[6]) + '</td>')
+                    myFile.write('</tr>')
+                    flag = 0
                 elif job_status == "FAILED":
                     myFile.write('<td style="background-color:Red;">' + str(row[6]) + '</td>')
                     myFile.write('</tr>')
@@ -600,7 +607,7 @@ def display_db_task_data(tasks_info):
 
 #jobs_list = ['6470', '6469', '6468', '6467', '6466', '6465', '6464', '6463', '6462', '6461', '6460', '6459', '6458', '6457', '6456', '6455', '6454', '6453', '6452', '6451', '6450', '6449', '6448', '6447', '6446', '6445', '6444', '6443', '6442', '6441', '6440', '6439', '6438', '6437', '6436', '6435', '6434', '6433', '6432', '6431', '6430', '6429', '6428', '6427', '6426', '6425', '6424', '6423', '6422', '6421', '6420', '6419', '6418', '6417', '6416', '6415', '6414', '6413', '6412', '6411', '6410', '6409', '6408', '6407', '6406', '6405', '6404', '6403', '6402', '6401', '6400', '6399', '6398', '6397', '6396', '6395', '6394', '6393', '6392', '6391', '6390', '6389', '6388', '6387', '6386', '6385', '6384', '6383', '6382', '6381', '6380', '6379', '6378', '6377', '6376', '6375', '6374', '6373', '6372', '6371']
 
-jobs_list_sort = ['6571', '6572', '6573', '6574', '6575', '6576', '6577', '6578', '6579', '6580', '6581', '6582']
+jobs_list_sort = ['6571', '6572', '6573', '6574', '6575', '6576', '6577', '6578', '6579', '6580', '6581', '6582', '6583', '6584']
 
 #jobs_list = job_ids_list()
 

@@ -22,6 +22,16 @@
     "builds": [
         {
             "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+            "number": 6584,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6584/"
+        },
+        {
+            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+            "number": 6583,
+            "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6583/"
+        },
+        {
+            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
             "number": 6582,
             "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6582/"
         },
@@ -390,28 +400,28 @@
     "fullName": "zeus_creative_recycles",
     "healthReport": [
         {
-            "description": "Build stability: 1 out of the last 5 builds failed.",
-            "iconClassName": "icon-health-60to79",
-            "iconUrl": "health-60to79.png",
-            "score": 80
+            "description": "Build stability: 2 out of the last 5 builds failed.",
+            "iconClassName": "icon-health-40to59",
+            "iconUrl": "health-40to59.png",
+            "score": 60
         }
     ],
     "inQueue": false,
     "keepDependencies": false,
     "lastBuild": {
         "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-        "number": 6582,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6582/"
+        "number": 6584,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6584/"
     },
     "lastCompletedBuild": {
         "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-        "number": 6582,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6582/"
+        "number": 6584,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6584/"
     },
     "lastFailedBuild": {
         "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-        "number": 6582,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6582/"
+        "number": 6584,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6584/"
     },
     "lastStableBuild": {
         "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
@@ -426,11 +436,11 @@
     "lastUnstableBuild": null,
     "lastUnsuccessfulBuild": {
         "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
-        "number": 6582,
-        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6582/"
+        "number": 6584,
+        "url": "https://fbd-ci.devops.fds.com/view/zeus_recycle/job/zeus_creative_recycles/6584/"
     },
     "name": "zeus_creative_recycles",
-    "nextBuildNumber": 6583,
+    "nextBuildNumber": 6585,
     "property": [
         {
             "_class": "hudson.model.ParametersDefinitionProperty",
